@@ -4,7 +4,7 @@ A quantum program consists of independent specimens of an unknown mixed state. T
 
 ## Source, processor, and output
 
-Let $`d\ge 2`$, $`1\le r<d`$, and $`k\ge 1`$ be integers. The single-register Hilbert space is $`\mathcal H=\mathbb C^d`$, and the data space is $`A=\mathcal H^{\otimes k}`$. The unknown parameter is an orthogonal projector $`P`$ on $`\mathcal H`$ with rank $`r`$. One source specimen is the state
+Let $`d\ge 2`$, $`1\le r\lt d`$, and $`k\ge 1`$ be integers. The single-register Hilbert space is $`\mathcal H=\mathbb C^d`$, and the data space is $`A=\mathcal H^{\otimes k}`$. The unknown parameter is an orthogonal projector $`P`$ on $`\mathcal H`$ with rank $`r`$. One source specimen is the state
 
 ```math
 \rho_P=\frac{P}{r}.
@@ -64,7 +64,7 @@ Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget for which such 
 
 ## The copy-complexity theorem
 
-**Theorem.** For every integer $`d\ge2`$, $`1\le r<d`$, $`k\ge1`$, and every $`0<\epsilon\le1/8`$,
+**Theorem.** For every integer $`d\ge2`$, $`1\le r\lt d`$, $`k\ge1`$, and every $`0\lt \epsilon\le1/8`$,
 
 ```math
 \frac{9}{8\pi^2}\frac{rk^2}{\epsilon}
@@ -89,15 +89,15 @@ Thus
 
 ```math
 N_*(d,r,k,\epsilon)=\Theta\!\left(\frac{rk^2}{\epsilon}\right)
-\qquad (k\ge r, 0<\epsilon\le1/8).
+\qquad (k\ge r, 0\lt \epsilon\le1/8).
 ```
 
-For $`k<r`$, the bounds stated here do not match. No complete optimal law in that regime is asserted. The upper construction itself applies throughout $`0<\epsilon\le1`$.
+For $`k\lt r`$, the bounds stated here do not match. No complete optimal law in that regime is asserted. The upper construction itself applies throughout $`0\lt \epsilon\le1`$.
 
 ## Availability and endpoints
 
 The collective interaction requires joint access to the data registers in each processed block. All registers may arrive together, or they may be processed in blocks that are jointly available. The theorem does not provide a device that accepts arbitrary sequential adaptive requests whose later input states do not yet exist. Its diamond guarantee permits arbitrary reference systems, but does not remove this availability requirement.
 
-The excluded endpoint $`r=d`$ is trivial. Then $`P=I_{\mathcal H}`$ is known and $`R_P=-I_{\mathcal H}`$, so the ordinary target channel is the identity and needs zero specimens. The converse therefore requires the nonempty complement $`r<d`$.
+The excluded endpoint $`r=d`$ is trivial. Then $`P=I_{\mathcal H}`$ is known and $`R_P=-I_{\mathcal H}`$, so the ordinary target channel is the identity and needs zero specimens. The converse therefore requires the nonempty complement $`r\lt d`$.
 
 The swap interaction is inherited from Hermitian-preserving map exponentiation, and the converse adapts established sample-to-query discrimination arguments. The precise relation to HME, ordinary DME, and multipartite collision simulation is recorded in [RELATED_WORK.md](../references/RELATED_WORK.md).

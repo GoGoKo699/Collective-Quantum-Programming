@@ -1,6 +1,6 @@
 # The parallel program and its copy bound
 
-Let $`P`$ be an unknown rank-$`r`$ orthogonal projector on $`\mathcal H=\mathbb C^d`$, with $`1\le r<d`$. One program specimen is $`\rho=P/r`$. There are $`k\ge1`$ data registers $`A_1,\ldots,A_k`$, each isomorphic to $`\mathcal H`$, and one fresh program register $`a`$. The data space is $`A=A_1\otimes\cdots\otimes A_k`$.
+Let $`P`$ be an unknown rank-$`r`$ orthogonal projector on $`\mathcal H=\mathbb C^d`$, with $`1\le r\lt d`$. One program specimen is $`\rho=P/r`$. There are $`k\ge1`$ data registers $`A_1,\ldots,A_k`$, each isomorphic to $`\mathcal H`$, and one fresh program register $`a`$. The data space is $`A=A_1\otimes\cdots\otimes A_k`$.
 
 ## The interaction and its moments
 
@@ -36,7 +36,7 @@ h=\mathcal E_\rho(H_*)=\sum_{j=1}^k\rho_j,
 
 ```math
 M=\mathcal E_\rho(H_*^2)
-=kI_A+\sum_{1\le i<j\le k}(\rho_i+\rho_j)S_{i,j}.
+=kI_A+\sum_{1\le i\lt j\le k}(\rho_i+\rho_j)S_{i,j}.
 ```
 
 The pair factor $`\rho_i+\rho_j`$ commutes with $`S_{i,j}`$. Since $`\|\rho\|_\infty=1/r`$, the triangle inequality gives $`\|M\|_\infty\le k+k(k-1)/r`$. Equality is attained on $`|v\rangle^{\otimes k}`$ for any unit vector $`|v\rangle`$ in the range of $`P`$. Therefore
@@ -152,7 +152,7 @@ Let $`\widehat\Phi_\delta`$ denote the collision channel obtained from this swee
 +\frac{2\pi^3r^3k^3}{3N^2}.
 ```
 
-For $`0<\epsilon\le1`$, choose
+For $`0\lt \epsilon\le1`$, choose
 
 ```math
 N=\left\lceil\frac{4\pi^2rk(r+k-1)}{\epsilon}\right\rceil.
@@ -189,7 +189,7 @@ N_{\mathrm{tot}}=\sum_{j=1}^qN_j
 \le\frac{4\pi^2q r k(r+b-1)}{\epsilon}+q.
 ```
 
-For $`k<r`$, there is one group. For $`k\ge r`$, use $`qr\le k+r-1`$ and $`r+b-1=2r-1\le2r`$. Together these cases imply
+For $`k\lt r`$, there is one group. For $`k\ge r`$, use $`qr\le k+r-1`$ and $`r+b-1=2r-1\le2r`$. Together these cases imply
 
 ```math
 N_{\mathrm{tot}}

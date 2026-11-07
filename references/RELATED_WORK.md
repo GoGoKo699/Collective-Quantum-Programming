@@ -1,6 +1,6 @@
 # Related work and contribution
 
-A source supplies independent copies of $`\rho_P=P/r`$, where $`P`$ is an unknown rank-$`r`$ projector on $`\mathbb C^d`$ and $`1\le r<d`$. The task is to apply the ordinary reflection $`R_P=I-2P`$ to $`k`$ jointly available data registers. Accuracy is measured by the diamond norm of the complete output channel, including data entangled across registers and with a reference.
+A source supplies independent copies of $`\rho_P=P/r`$, where $`P`$ is an unknown rank-$`r`$ projector on $`\mathbb C^d`$ and $`1\le r\lt d`$. The task is to apply the ordinary reflection $`R_P=I-2P`$ to $`k`$ jointly available data registers. Accuracy is measured by the diamond norm of the complete output channel, including data entangled across registers and with a reference.
 
 The collective construction gives
 
@@ -8,7 +8,7 @@ The collective construction gives
 N=O\!\left(\frac{r^2k+rk^2}{\varepsilon}\right)
 ```
 
-program copies. A converse for arbitrary deterministic processors gives $`N=\Omega(rk^2/\varepsilon)`$. Consequently, for $`k\ge r`$ and $`0<\varepsilon\le1/8`$, the optimal sample cost is
+program copies. A converse for arbitrary deterministic processors gives $`N=\Omega(rk^2/\varepsilon)`$. Consequently, for $`k\ge r`$ and $`0\lt \varepsilon\le1/8`$, the optimal sample cost is
 
 ```math
 N_*(d,r,k,\varepsilon)
@@ -59,6 +59,6 @@ Approximate program recycling is also established. [Yang, Renner, and Chiribella
 
 ## Relation to flat-subspace classification
 
-[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/tree/632fa8921e16b17dd5905b2e4f8d7f79d1570186) studies the same flat training source followed by one test from either $`P/r`$ or the known background $`I/d`$. At the cited revision, its [precision theorem](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/quantum_precision.md) gives $`\Theta(r^2/\varepsilon)`$ coherent training copies for excess classification risk, uniformly for $`1\le r\le d/2`$ and $`0<\varepsilon\le1/8`$. Its [construction](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/constructions.md) already uses a controlled support reflection.
+[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/tree/632fa8921e16b17dd5905b2e4f8d7f79d1570186) studies the same flat training source followed by one test from either $`P/r`$ or the known background $`I/d`$. At the cited revision, its [precision theorem](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/quantum_precision.md) gives $`\Theta(r^2/\varepsilon)`$ coherent training copies for excess classification risk, uniformly for $`1\le r\le d/2`$ and $`0\lt \varepsilon\le1/8`$. Its [construction](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/constructions.md) already uses a controlled support reflection.
 
-That single-test rank law and attaining reflection construction are antecedents. The present result supplies a coherent channel on $`k`$ data registers, identifies the sample saving from collective programming, and proves the optimal order when $`k\ge r`$. Its upper bound requires all targets in each batch to be available together. A processor accepting an arbitrary sequence of adaptive future inputs is a separate task, and a matching sample law throughout $`k<r`$ is not established here.
+That single-test rank law and attaining reflection construction are antecedents. The present result supplies a coherent channel on $`k`$ data registers, identifies the sample saving from collective programming, and proves the optimal order when $`k\ge r`$. Its upper bound requires all targets in each batch to be available together. A processor accepting an arbitrary sequence of adaptive future inputs is a separate task, and a matching sample law throughout $`k\lt r`$ is not established here.

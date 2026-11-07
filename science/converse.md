@@ -6,7 +6,7 @@ The reduction adapts the sample-to-query discrimination method used in rigorous 
 
 ## Statement
 
-Let $`d\ge2`$, $`1\le r<d`$, $`k\ge1`$, and $`0<\epsilon\le1/8`$. Suppose a fixed deterministic processor with a hard budget of $`N`$ specimens of $`\rho_P=P/r`$ implements the ordinary channel $`\mathcal R_P^{(k)}`$ with unhalved diamond error at most $`\epsilon`$, uniformly over all rank-$`r`$ projectors $`P`$. The model includes arbitrary joint operations, ancillas, measurement feedforward, and entangled data inputs, as defined in [model.md](model.md).
+Let $`d\ge2`$, $`1\le r\lt d`$, $`k\ge1`$, and $`0\lt \epsilon\le1/8`$. Suppose a fixed deterministic processor with a hard budget of $`N`$ specimens of $`\rho_P=P/r`$ implements the ordinary channel $`\mathcal R_P^{(k)}`$ with unhalved diamond error at most $`\epsilon`$, uniformly over all rank-$`r`$ projectors $`P`$. The model includes arbitrary joint operations, ancillas, measurement feedforward, and entangled data inputs, as defined in [model.md](model.md).
 
 **Theorem.** Every such processor satisfies
 
@@ -29,7 +29,7 @@ P_\theta=|v_\theta\rangle\langle v_\theta|
 +\sum_{j=2}^r|e_j\rangle\langle e_j|.
 ```
 
-The second sum is empty when $`r=1`$. Both projectors have rank $`r`$; the direction $`|e_{r+1}\rangle`$ exists because $`r<d`$. Write $`\rho_0=P_0/r`$ and $`\rho_\theta=P_\theta/r`$.
+The second sum is empty when $`r=1`$. Both projectors have rank $`r`$; the direction $`|e_{r+1}\rangle`$ exists because $`r\lt d`$. Write $`\rho_0=P_0/r`$ and $`\rho_\theta=P_\theta/r`$.
 
 For states $`\alpha`$ and $`\beta`$, define the root fidelity and trace distance by
 
@@ -143,4 +143,4 @@ as claimed.
 
 The proof uses a hard specimen budget and an unconditional channel guarantee. It makes no restriction on the processor's internal measurement strategy or on whether its stored description is quantum or classical. A success-conditioned channel or an expected-copy budget would require a different statement.
 
-All $`k`$ data registers are available during every invocation in the discrimination experiment. Repeating this parallel processor does not establish a construction for arbitrary sequential adaptive requests. The lower bound holds for every positive $`k`$, and matches the [upper bound](parallel_program.md) when $`k\ge r`$. It leaves the optimal dependence for $`k<r`$ unresolved.
+All $`k`$ data registers are available during every invocation in the discrimination experiment. Repeating this parallel processor does not establish a construction for arbitrary sequential adaptive requests. The lower bound holds for every positive $`k`$, and matches the [upper bound](parallel_program.md) when $`k\ge r`$. It leaves the optimal dependence for $`k\lt r`$ unresolved.

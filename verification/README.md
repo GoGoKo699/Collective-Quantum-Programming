@@ -1,5 +1,7 @@
 # Reproduce the finite checks
 
+For the separate comparison of GitHub's displayed mathematics with its committed source, see [hosted mathematics](hosted/README.md). That check and its screenshots concern rendering, not the validity of the proofs or the numerical bounds below.
+
 Run from the repository root:
 
 ```bash

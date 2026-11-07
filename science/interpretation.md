@@ -2,7 +2,7 @@
 
 A copy of an unknown state can carry instructions for a quantum operation. Here the program is the flat state $`\rho_P=P/r`$, and the instruction is to reverse the phase on the unknown support of $`P`$. The support has no supplied classical description. The processor must act coherently on an entire batch, including inputs entangled with systems it cannot access.
 
-For $`1\le r<d`$, $`k\ge r`$ and $`0<\varepsilon\le1/8`$, the [model and theorem](model.md) give
+For $`1\le r\lt d`$, $`k\ge r`$ and $`0\lt \varepsilon\le1/8`$, the [model and theorem](model.md) give
 
 ```math
 N_*(d,r,k,\varepsilon)=\Theta\!\left(\frac{rk^2}{\varepsilon}\right).
@@ -33,7 +33,7 @@ Ordinary density matrix exponentiation on one target uses $`O(r^2/\eta)`$ specim
 | Batch regime | Shared-program specimen upper | Separate-DME specimen upper | What is established |
 |---|---|---|---|
 | $`k=1`$ | $`O(r^2/\varepsilon)`$ | $`O(r^2/\varepsilon)`$ | The usual one-target upper is recovered. |
-| $`1<k<r`$ | $`O(r^2k/\varepsilon)`$ | $`O(r^2k^2/\varepsilon)`$ | An improved construction; the optimum is not determined here. |
+| $`1\lt k\lt r`$ | $`O(r^2k/\varepsilon)`$ | $`O(r^2k^2/\varepsilon)`$ | An improved construction; the optimum is not determined here. |
 | $`k\ge r`$ | $`O(rk^2/\varepsilon)`$ | $`O(r^2k^2/\varepsilon)`$ | A factor-$`r`$ improvement in the asymptotic specimen bound, with a matching unrestricted converse. |
 
 At $`k=r`$, for example, the shared construction uses $`O(r^3/\varepsilon)`$ specimens, while the separate construction uses $`O(r^4/\varepsilon)`$. These are scaling statements; the explicit constants and ceilings are given with the constructions. The comparison is to the specified separate-DME protocol. It is not a lower bound on all processors that might be described as independent, and it does not establish a universal separation from classical estimation.

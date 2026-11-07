@@ -1,6 +1,6 @@
 # Circuits, accuracy and resources
 
-The processor uses copies of $`\rho_P=P/r`$ to implement $`R_P^{\otimes k}`$, where $`R_P=I-2P`$, $`1\le r<d`$ and $`0<\epsilon\le1/8`$. The rank $`r`$, the dimension $`d`$ and the requested error are known. The projector is supplied only through its copies. This page implements the [collective construction](parallel_program.md) using ordinary gates and accounts for the error introduced by that implementation.
+The processor uses copies of $`\rho_P=P/r`$ to implement $`R_P^{\otimes k}`$, where $`R_P=I-2P`$, $`1\le r\lt d`$ and $`0\lt \epsilon\le1/8`$. The rank $`r`$, the dimension $`d`$ and the requested error are known. The projector is supplied only through its copies. This page implements the [collective construction](parallel_program.md) using ordinary gates and accounts for the error introduced by that implementation.
 
 Targets in the same group must be available together. Different groups may be processed successively, and the input may be entangled across groups and with an external reference. The promised output is the complete parallel channel. These resources do not provide an oracle that accepts arbitrary future adaptive requests.
 
@@ -130,7 +130,7 @@ Replacing every collision by a symmetric sweep and telescoping over the $`N`$ st
 
 The first term is the program-induced error. The second is the implementation error of the collective interaction. Both bounds are nonasymptotic.
 
-For a group error allowance $`0<\eta\le1`$, choose
+For a group error allowance $`0\lt \eta\le1`$, choose
 
 ```math
 N_b(\eta)
