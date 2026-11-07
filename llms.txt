@@ -1,0 +1,26 @@
+# Collective Quantum Programming
+
+> Sample complexity of programming a parallel batch of unknown support reflections from flat-rank quantum states.
+
+## Scientific entry points
+
+- [Overview](README.md): Task, theorem, explicit comparison, limits and reproduction.
+- [Science index](science/README.md): Connected reading order and proof dependencies.
+- [Model](science/model.md): Independent programs P/r, known rank, deterministic unconditional processing, hard specimen budget and joint unhalved diamond error.
+- [Collision bound](science/collision_bound.md): Nonasymptotic variance-sensitive reduced-channel lemma.
+- [Collective construction](science/parallel_program.md): Swap moments, exact variance, repeated collisions and batching.
+- [Converse](science/converse.md): Nearby-support fidelity and phase-amplification lower bound.
+- [Resources](science/resources.md): Pair gates, symmetric sweeps, finite rotation synthesis, memory and preparation charges.
+- [Interpretation](science/interpretation.md): Large-batch optimality, explicit DME comparison and unresolved small-batch dependence.
+
+## Evidence and attribution
+
+- [Related work](references/RELATED_WORK.md): Model-level comparisons and inherited methods.
+- [Bibliography](references/references.bib): Version-specific primary references.
+- [Verification](verification/README.md): Commands, actual outputs and numerical limitations.
+- [Verification code](verification/verify.py): Small-dimensional matrix checks.
+- [Recorded results](verification/results.json): Actual output of the documented run.
+
+## Claim boundaries
+
+The matching law N*=Theta(r k^2/epsilon) holds for k>=r, 1<=r<d and 0<epsilon<=1/8. The construction has order (r^2 k+r k^2)/epsilon for all positive k. The exact-angle theorem and the finite-gate resource allocation have different constants. No matching small-batch theorem, controlled unknown reflection, online adaptive oracle, catalyst return, generic classical-compiler separation or runtime advantage is claimed. Public analytical proofs are authoritative; numerical checks do not establish the universal theorem or priority.
