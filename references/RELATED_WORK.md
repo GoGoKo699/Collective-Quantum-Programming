@@ -1,6 +1,6 @@
 # Related work and contribution
 
-A source supplies independent copies of $`\rho_P=P/r`$, where $`P`$ is an unknown rank-$`r`$ projector on $`\mathbb C^d`$ and $`1\le r<d`$. The task is to apply the ordinary reflection $`R_P=I-2P`$ to $`k`$ jointly available data registers. Accuracy is measured by the diamond norm of the complete output channel, including data entangled across registers and with a reference.
+A source supplies independent copies of $`\rho_P=P/r`$, where $`P`$ is an unknown rank-$`r`$ projector on $`\mathbb C^d`$ and $`1\le r\lt d`$. The task is to apply the ordinary reflection $`R_P=I-2P`$ to $`k`$ jointly available data registers. Accuracy is measured by the diamond norm of the complete output channel, including data entangled across registers and with a reference.
 
 The collective construction gives
 
@@ -8,7 +8,7 @@ The collective construction gives
 N=O\!\left(\frac{r^2k+rk^2}{\varepsilon}\right)
 ```
 
-program copies. A converse for arbitrary deterministic processors gives $`N=\Omega(rk^2/\varepsilon)`$. Consequently, for $`k\ge r`$ and $`0<\varepsilon\le1/8`$, the optimal sample cost is
+program copies. A converse for arbitrary deterministic processors gives $`N=\Omega(rk^2/\varepsilon)`$. Consequently, for $`k\ge r`$ and $`0\lt \varepsilon\le1/8`$, the optimal sample cost is
 
 ```math
 N_*(d,r,k,\varepsilon)
@@ -25,13 +25,13 @@ For $`\rho_P=P/r`$, evolution for time $`t=\pi r`$ gives $`e^{-it\rho_P}=R_P`$. 
 
 ## HME supplies the collective interaction
 
-[Wei et al. (2024)](https://doi.org/10.1038/s41534-024-00949-z) introduced Hermitian-preserving map exponentiation (HME). For a Hermitian-preserving linear map $`\mathcal N`$, their processor uses the interaction $`H=\operatorname{Choi}(\mathcal N)^{T_{\mathrm{in}}}`$ to simulate $`e^{-it\mathcal N(\rho)}`$. Taking $`\mathcal N(\rho)=\sum_{j=1}^k\rho_j`$ gives exactly
+[Wei et al. (2024)](https://doi.org/10.1038/s41534-024-00949-z) introduced Hermitian-preserving map exponentiation (HME). For a Hermitian-preserving linear map $`\mathcal N`$, their processor uses the interaction $`H=\mathrm{Choi}(\mathcal N)^{T_{\mathrm{in}}}`$ to simulate $`e^{-it\mathcal N(\rho)}`$. Taking $`\mathcal N(\rho)=\sum_{j=1}^k\rho_j`$ gives exactly
 
 ```math
-H_\star=\sum_{j=1}^k\operatorname{SWAP}_{a,j},
+H_\star=\sum_{j=1}^k\mathrm{SWAP}_{a,j},
 ```
 
-where $`a`$ is the program register. Thus HME already supplies the interaction used here. Its generic $`O(t^2\|H\|_\infty^2/\varepsilon)`$ sample bound gives $`O(r^2k^2/\varepsilon)`$ for this choice.
+where $`a`$ is the program register. Thus HME already supplies the interaction used here. Its generic $`O(t^2\Vert H\Vert_\infty^2/\varepsilon)`$ sample bound gives $`O(r^2k^2/\varepsilon)`$ for this choice.
 
 State-sensitive improvements also have a direct HME precedent. Appendix C.2, Proposition 3 and Lemma 6 of the [2023 preprint, v1](https://arxiv.org/html/2308.07956v1#A3.SS2), improve the partial-transpose simulation bound from a quadratic to a linear factor in the transposed subsystem dimension. That analysis controls mixed higher moments and retains a marginal-state operator norm. The refinement here evaluates the compressed variance of $`H_\star`$ for $`P/r`$, producing the different dependence $`r^2k+rk^2`$. It uses this established approach to obtain the parallel programming law.
 
@@ -59,6 +59,6 @@ Approximate program recycling is also established. [Yang, Renner, and Chiribella
 
 ## Relation to flat-subspace classification
 
-[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/tree/632fa8921e16b17dd5905b2e4f8d7f79d1570186) studies the same flat training source followed by one test from either $`P/r`$ or the known background $`I/d`$. At the cited revision, its [precision theorem](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/quantum_precision.md) gives $`\Theta(r^2/\varepsilon)`$ coherent training copies for excess classification risk, uniformly for $`1\le r\le d/2`$ and $`0<\varepsilon\le1/8`$. Its [construction](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/constructions.md) already uses a controlled support reflection.
+[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/tree/632fa8921e16b17dd5905b2e4f8d7f79d1570186) studies the same flat training source followed by one test from either $`P/r`$ or the known background $`I/d`$. At the cited revision, its [precision theorem](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/quantum_precision.md) gives $`\Theta(r^2/\varepsilon)`$ coherent training copies for excess classification risk, uniformly for $`1\le r\le d/2`$ and $`0\lt \varepsilon\le1/8`$. Its [construction](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/constructions.md) already uses a controlled support reflection.
 
-That single-test rank law and attaining reflection construction are antecedents. The present result supplies a coherent channel on $`k`$ data registers, identifies the sample saving from collective programming, and proves the optimal order when $`k\ge r`$. Its upper bound requires all targets in each batch to be available together. A processor accepting an arbitrary sequence of adaptive future inputs is a separate task, and a matching sample law throughout $`k<r`$ is not established here.
+That single-test rank law and attaining reflection construction are antecedents. The present result supplies a coherent channel on $`k`$ data registers, identifies the sample saving from collective programming, and proves the optimal order when $`k\ge r`$. Its upper bound requires all targets in each batch to be available together. A processor accepting an arbitrary sequence of adaptive future inputs is a separate task, and a matching sample law throughout $`k\lt r`$ is not established here.

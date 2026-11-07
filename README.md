@@ -4,7 +4,7 @@ How many copies of an unknown quantum state are needed to program the same refle
 
 ## Main result
 
-Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget of a deterministic, unconditional processor that achieves error at most $`\epsilon`$ uniformly over all rank-$`r`$ projectors. For $`1\le r<d`$, $`k\ge1`$ and $`0<\epsilon\le1/8`$,
+Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget of a deterministic, unconditional processor that achieves error at most $`\epsilon`$ uniformly over all rank-$`r`$ projectors. For $`1\le r\lt d`$, $`k\ge1`$ and $`0\lt \epsilon\le1/8`$,
 
 ```math
 \frac{9}{8\pi^2}\frac{rk^2}{\epsilon}
@@ -39,11 +39,19 @@ The collective interaction itself is an instance of Hermitian-preserving map exp
 
 The [science index](science/README.md) gives the proof dependencies. Each argument has one authoritative page.
 
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [source bridge](learning/ANCHOR.md) selects the relevant chapters and translates the channel, fidelity and norm conventions used in the proofs.
+
+The [30-milestone map](learning/MILESTONES.md) has **12 background/preliminaries milestones** and **18 narrative/innovation milestones**. The first phase builds the complete programming contract from states, channels and distinguishability; the second connects the variance mechanism, implementation and converse to the optimal large-batch law.
+
+Use the [worked tutorial](learning/TUTORIAL.md) to follow that route through a two-target example, error accounting and the discrimination argument. The [LLM reading guide](llms.txt) maps questions to the authoritative science and learning pages.
+
 ## Scope and limitations
 
 The rank is known and the spectrum is exactly flat. Access consists of independent specimens of $`P/r`$; a preparation unitary, its inverse, a purification oracle and a classical eigenbasis are not supplied. Specimens are consumed. The guarantee concerns a parallel batch and does not provide a reusable oracle for future adaptive requests.
 
-For $`k<r`$, the upper and lower bounds do not generally match. For $`r=d`$, the target is the identity channel and requires no specimens. The sample saving is not a claimed gate-count or wall-clock improvement: bounded-size groups use $`O(r^2k^2/\epsilon)`$ pair partial swaps, with additional dimension and rotation-synthesis costs stated explicitly.
+For $`k\lt r`$, the upper and lower bounds do not generally match. For $`r=d`$, the target is the identity channel and requires no specimens. The sample saving is not a claimed gate-count or wall-clock improvement: bounded-size groups use $`O(r^2k^2/\epsilon)`$ pair partial swaps, with additional dimension and rotation-synthesis costs stated explicitly.
 
 ## Reproduce the finite checks
 

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 10,
+      "source_sha256": "5b33ad9082b9527561ef6200036fa8dc48c9f73bd0b0713f8885b457b0aff2d9",
+      "expected_text": "1≤r<d"
+    },
+    {
+      "path": "README.md",
+      "index": 12,
+      "source_sha256": "92010ec897632f4c61b2b40cacddcb5e8a294e780e335cf8a332dc7ea0d36730",
+      "expected_text": "0<ε≤1/8"
+    },
+    {
+      "path": "README.md",
+      "index": 13,
+      "source_sha256": "f80aa07c893e332d98a8286b02b63e2ab47326275fff9953735fd29955253239",
+      "expected_text": "98π2rk2ε≤N∗(d,r,k,ε)≤⌈4π2rk(r+k−1)ε⌉."
+    },
+    {
+      "path": "README.md",
+      "index": 14,
+      "source_sha256": "f85901d0d54f9cab3a33d3c9e6c4f1804f1171f500992433c26eea04b69aa5de",
+      "expected_text": "k≥r"
+    },
+    {
+      "path": "README.md",
+      "index": 15,
+      "source_sha256": "427e53992b61b77271e0242dd7a6b16db59d66039ca3f4e6740147fa2f11b8b6",
+      "expected_text": "N∗(d,r,k,ε)=Θ(rk2ε)."
+    },
+    {
+      "path": "science/parallel_program.md",
+      "index": 22,
+      "source_sha256": "1dc3b0121755d6e2c51668a114a7c97a7da73641fd3a122aa97f957fa3dd4360",
+      "expected_text": "Eρ(Sa,j)=ρj,Eρ(Sa,iSa,j)=ρjSi,j(i≠j)."
+    },
+    {
+      "path": "science/parallel_program.md",
+      "index": 59,
+      "source_sha256": "9c3be042a7c255f72596a63d8b2196e986859b9f3bf5dac3a0196a7137fa8ddf",
+      "expected_text": "vr,k:=‖M−h2‖∞=maxm∈{0,...,k}(k+(k−1)mr−m2r2)."
+    },
+    {
+      "path": "science/collision_bound.md",
+      "index": 25,
+      "source_sha256": "4290f5c7664140845ceb06b06d5f227c9da7bc1e1e3d7e3e3b6d5f96b3735692",
+      "expected_text": "‖Φτ−Uτ‖⋄≤2τ2v."
+    },
+    {
+      "path": "science/converse.md",
+      "index": 11,
+      "source_sha256": "3a157eb9e215f9bb999d494c87d1a0b540b1ea442c5df4021703d6c6fe7ea86d",
+      "expected_text": "N≥98π2rk2ε."
+    },
+    {
+      "path": "science/converse.md",
+      "index": 29,
+      "source_sha256": "bf2af2d7a4dcd8628d2971b194023e6f1d8e3112e22e390abcc295f36d8083b3",
+      "expected_text": "f:=f(ρ0,ρθ)=r−1+cosθr."
+    },
+    {
+      "path": "science/converse.md",
+      "index": 31,
+      "source_sha256": "ab1646e5b3c240827238d03e27fee722f7b4c145ef257bdb7d183dbfe93e75b8",
+      "expected_text": "T(ρ0⊗L,ρθ⊗L)≤1−f2L≤2L(1−f)≤Lθ2r."
+    },
+    {
+      "path": "science/resources.md",
+      "index": 64,
+      "source_sha256": "f62020d9ee0c0d10ee5cdee0194562b13e603b483f57260fa3ed131ee7fcad8f",
+      "expected_text": "η=ε2q,Nj=⌈8π2qrbj(r+bj−1)ε⌉,δj=πrNj."
+    },
+    {
+      "path": "science/resources.md",
+      "index": 67,
+      "source_sha256": "c794da40339dc1505a2b6cdbb56d250e362c164ba4a116797013424626615b3f",
+      "expected_text": "ζ=ε4L,"
+    },
+    {
+      "path": "learning/ANCHOR.md",
+      "index": 19,
+      "source_sha256": "b4d9e6cf2f893c7dcfc97e3b37370bbd40dfd552fd7fda40e1dd600a58698a09",
+      "expected_text": "f(ρ,σ)=‖ρσ‖1"
+    },
+    {
+      "path": "learning/ANCHOR.md",
+      "index": 20,
+      "source_sha256": "882994b1c82eea1949a12eba311f338cee9a358a173529c586a079abf9121fd6",
+      "expected_text": "F=f"
+    },
+    {
+      "path": "learning/ANCHOR.md",
+      "index": 22,
+      "source_sha256": "d1152c6c5cd5e76f56e70df33dfffe9104c011c76bfa1b8984ae669ab86ed867",
+      "expected_text": "|||Φ|||1"
+    },
+    {
+      "path": "learning/ANCHOR.md",
+      "index": 23,
+      "source_sha256": "04065d3c54e62832a84474cdbcd2bc63aad73e50023898fc9970160598e461fb",
+      "expected_text": "‖Φ‖⋄"
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 30,
+      "source_sha256": "0c0075082ba2a42985f418036f29d6cd492bb30e55bc29a45ee9d9b7b7935238",
+      "expected_text": "P=diag(1,1,0),ρP=diag(1/2,1/2,0),RP=diag(−1,−1,1)."
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 33,
+      "source_sha256": "7f477b09ed27669ce17e475ed062046ec964019ecca3349fefcc58716c63cc50",
+      "expected_text": "RP⊗2|ψ⟩=|00⟩−|12⟩2."
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 49,
+      "source_sha256": "749eaf99a7aeff396c7b8423965107d77491f5adf94a3e6b2ffff9ae161fe4b5",
+      "expected_text": "v2,2=maxm∈{0,1,2}(2+m2−m24)=94."
+    }
+  ]
+}

@@ -21,6 +21,16 @@
 - [Verification code](verification/verify.py): Small-dimensional matrix checks.
 - [Recorded results](verification/results.json): Actual output of the documented run.
 
+## Learning route
+
+The single educational anchor is John Watrous, The Theory of Quantum Information (2018), using the author's standard-layout manuscript for section and page pointers.
+
+- [Source bridge](learning/ANCHOR.md): Targeted sections, notation, root-fidelity and unhalved-diamond conventions, and the steps supplied by this project.
+- [Thirty milestones](learning/MILESTONES.md): M01–M12 background/preliminaries and M13–M30 narrative/innovation; stable understanding targets, earlier dependencies and source pointers.
+- [Worked tutorial](learning/TUTORIAL.md): A connected pass through the settled map, including a rank-two qutrit example, total-error accounting, gates and the converse.
+
+Use the milestone map for the project-wide dependency order, the source bridge for textbook connections, and the scientific pages for complete proofs and exact domains. The map is independent of any reader's progress or assessment history.
+
 ## Claim boundaries
 
 The matching law N*=Theta(r k^2/epsilon) holds for k>=r, 1<=r<d and 0<epsilon<=1/8. The construction has order (r^2 k+r k^2)/epsilon for all positive k. The exact-angle theorem and the finite-gate resource allocation have different constants. No matching small-batch theorem, controlled unknown reflection, online adaptive oracle, catalyst return, generic classical-compiler separation or runtime advantage is claimed. Public analytical proofs are authoritative; numerical checks do not establish the universal theorem or priority.

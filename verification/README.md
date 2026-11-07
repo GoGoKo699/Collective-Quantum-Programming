@@ -1,5 +1,7 @@
 # Reproduce the finite checks
 
+For the separate comparison of GitHub's displayed mathematics with its committed source, see [hosted mathematics](hosted/README.md). That check and its screenshots concern rendering, not the validity of the proofs or the numerical bounds below.
+
 Run from the repository root:
 
 ```bash
@@ -18,7 +20,7 @@ Seven instances are included:
           (3,1,2), (3,2,1), (3,2,2).
 ```
 
-Each projector has a complex orientation obtained by QR factorization. Independent tensor-permutation matrices construct the program-target swaps. Partial contractions of those matrices are compared with the formulas for $`h`$, $`M`$ and $`\|M-h^2\|_\infty`$ in the [construction](../science/parallel_program.md). The maximum first/second-moment residual in the stored run is below $`1.8\times10^{-15}`$; the maximum variance discrepancy is below $`9\times10^{-16}`$.
+Each projector has a complex orientation obtained by QR factorization. Independent tensor-permutation matrices construct the program-target swaps. Partial contractions of those matrices are compared with the formulas for $`h`$, $`M`$ and $`\Vert M-h^2\Vert_\infty`$ in the [construction](../science/parallel_program.md). The maximum first/second-moment residual in the stored run is below $`1.8\times10^{-15}`$; the maximum variance discrepancy is below $`9\times10^{-16}`$.
 
 At each of $`\delta=0.03,0.12,0.4`$, the script checks both terms in the [reduced-unitary proof](../science/collision_bound.md): the compressed propagator error and the leakage effect. These are 21 local checks. The finite matrices satisfy the analytical upper bounds within the stated floating-point tolerances.
 

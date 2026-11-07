@@ -4,7 +4,7 @@ A quantum program consists of independent specimens of an unknown mixed state. T
 
 ## Source, processor, and output
 
-Let $`d\ge 2`$, $`1\le r<d`$, and $`k\ge 1`$ be integers. The single-register Hilbert space is $`\mathcal H=\mathbb C^d`$, and the data space is $`A=\mathcal H^{\otimes k}`$. The unknown parameter is an orthogonal projector $`P`$ on $`\mathcal H`$ with rank $`r`$. One source specimen is the state
+Let $`d\ge 2`$, $`1\le r\lt d`$, and $`k\ge 1`$ be integers. The single-register Hilbert space is $`\mathcal H=\mathbb C^d`$, and the data space is $`A=\mathcal H^{\otimes k}`$. The unknown parameter is an orthogonal projector $`P`$ on $`\mathcal H`$ with rank $`r`$. One source specimen is the state
 
 ```math
 \rho_P=\frac{P}{r}.
@@ -41,12 +41,12 @@ The hard source budget is $`N`$ specimens. A processor may discard unused specim
 
 ## Joint accuracy
 
-For an operator $`X`$, write $`\|X\|_1=\operatorname{Tr}\sqrt{X^\dagger X}`$ and let $`\|X\|_\infty`$ denote its operator norm. The error convention is the **unhalved diamond norm**. For the difference $`\Delta`$ of two channels on $`A`$,
+For an operator $`X`$, write $`\Vert X\Vert_1=\mathrm{Tr}\,\sqrt{X^\dagger X}`$ and let $`\Vert X\Vert_\infty`$ denote its operator norm. The error convention is the **unhalved diamond norm**. For the difference $`\Delta`$ of two channels on $`A`$,
 
 ```math
-\|\Delta\|_\diamond
+\Vert\Delta\Vert_\diamond
 =\sup_{\omega\in\mathsf D(A\otimes Z)}
-\left\|(\Delta\otimes\operatorname{id}_Z)(\omega)\right\|_1,
+\left\Vert(\Delta\otimes\mathrm{id}_Z)(\omega)\right\Vert_1,
 \qquad \dim Z=\dim A=d^k.
 ```
 
@@ -55,8 +55,8 @@ The set $`\mathsf D(B)`$ contains the density operators on $`B`$. The reference 
 A processor is $`\epsilon`$-accurate if
 
 ```math
-\sup_{P:\,P^2=P=P^\dagger,\ \operatorname{rank}P=r}
-\left\|\widetilde{\mathcal R}_P-\mathcal R_P^{(k)}\right\|_\diamond
+\sup_{P:\,P^2=P=P^\dagger,\ \mathrm{rank}\,P=r}
+\left\Vert\widetilde{\mathcal R}_P-\mathcal R_P^{(k)}\right\Vert_\diamond
 \le\epsilon.
 ```
 
@@ -64,7 +64,7 @@ Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget for which such 
 
 ## The copy-complexity theorem
 
-**Theorem.** For every integer $`d\ge2`$, $`1\le r<d`$, $`k\ge1`$, and every $`0<\epsilon\le1/8`$,
+**Theorem.** For every integer $`d\ge2`$, $`1\le r\lt d`$, $`k\ge1`$, and every $`0\lt \epsilon\le1/8`$,
 
 ```math
 \frac{9}{8\pi^2}\frac{rk^2}{\epsilon}
@@ -89,15 +89,15 @@ Thus
 
 ```math
 N_*(d,r,k,\epsilon)=\Theta\!\left(\frac{rk^2}{\epsilon}\right)
-\qquad (k\ge r, 0<\epsilon\le1/8).
+\qquad (k\ge r, 0\lt \epsilon\le1/8).
 ```
 
-For $`k<r`$, the bounds stated here do not match. No complete optimal law in that regime is asserted. The upper construction itself applies throughout $`0<\epsilon\le1`$.
+For $`k\lt r`$, the bounds stated here do not match. No complete optimal law in that regime is asserted. The upper construction itself applies throughout $`0\lt \epsilon\le1`$.
 
 ## Availability and endpoints
 
 The collective interaction requires joint access to the data registers in each processed block. All registers may arrive together, or they may be processed in blocks that are jointly available. The theorem does not provide a device that accepts arbitrary sequential adaptive requests whose later input states do not yet exist. Its diamond guarantee permits arbitrary reference systems, but does not remove this availability requirement.
 
-The excluded endpoint $`r=d`$ is trivial. Then $`P=I_{\mathcal H}`$ is known and $`R_P=-I_{\mathcal H}`$, so the ordinary target channel is the identity and needs zero specimens. The converse therefore requires the nonempty complement $`r<d`$.
+The excluded endpoint $`r=d`$ is trivial. Then $`P=I_{\mathcal H}`$ is known and $`R_P=-I_{\mathcal H}`$, so the ordinary target channel is the identity and needs zero specimens. The converse therefore requires the nonempty complement $`r\lt d`$.
 
 The swap interaction is inherited from Hermitian-preserving map exponentiation, and the converse adapts established sample-to-query discrimination arguments. The precise relation to HME, ordinary DME, and multipartite collision simulation is recorded in [RELATED_WORK.md](../references/RELATED_WORK.md).
