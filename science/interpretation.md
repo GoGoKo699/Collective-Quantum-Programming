@@ -2,10 +2,10 @@
 
 A copy of an unknown state can carry instructions for a quantum operation. Here the program is the flat state $`\rho_P=P/r`$, and the instruction is to reverse the phase on the unknown support of $`P`$. The support has no supplied classical description. The processor must act coherently on an entire batch, including inputs entangled with systems it cannot access.
 
-For $`k\ge r`$, the [model and theorem](model.md) give
+For $`1\le r<d`$, $`k\ge r`$ and $`0<\varepsilon\le1/8`$, the [model and theorem](model.md) give
 
 ```math
-N^*(d,r,k,\varepsilon)=\Theta\!\left(\frac{rk^2}{\varepsilon}\right).
+N_*(d,r,k,\varepsilon)=\Theta\!\left(\frac{rk^2}{\varepsilon}\right).
 ```
 
 The statement is uniform in the register dimension $`d>r`$. It concerns the copies consumed by an unconditional processor at global diamond error $`\varepsilon`$. The [lower bound](converse.md) applies to every processor in this model, while the [construction](parallel_program.md) attains the same order with known pair interactions.
