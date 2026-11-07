@@ -28,7 +28,7 @@ W_S\bigl(|0\rangle_a|\psi_s\rangle\bigr)
 =\left|\frac{1-s}{2}\right\rangle_a|\psi_s\rangle.
 ```
 
-With the convention $`R_z(\theta)=\operatorname{diag}(e^{-i\theta/2},e^{i\theta/2})`$, the circuit
+With the convention $`R_z(\theta)=\mathrm{diag}(e^{-i\theta/2},e^{i\theta/2})`$, the circuit
 
 ```math
 W_S\bigl(R_z(2\alpha)_a\otimes I\bigr)W_S
@@ -72,7 +72,7 @@ This sweep contains $`2b-1`$ pair partial swaps. For $`b=1`$, it is the exact co
 The operator-norm estimate
 
 ```math
-\left\|T_b(\delta)-e^{-i\delta H_b}\right\|_\infty
+\left\Vert T_b(\delta)-e^{-i\delta H_b}\right\Vert_\infty
 \le \frac{b^3|\delta|^3}{3}
 ```
 
@@ -88,13 +88,13 @@ T_b''(0)=-H_b^2.
 
 The first derivative follows by differentiating the factors. The palindromic order gives $`T_b(\delta)T_b(-\delta)=I`$; expanding this identity to second order gives the second derivative.
 
-Every factor is unitary, every swap has norm one, and the sum of the absolute generator weights in the product is $`b`$. The Leibniz expansion therefore bounds the norm of its third derivative by $`b^3`$, at every real argument. The exact exponential has the same derivative bound because $`\|H_b\|_\infty\le b`$. Both functions have identical Taylor terms through second order. Applying the integral remainder to each gives the displayed $`b^3|\delta|^3/3`$ estimate.
+Every factor is unitary, every swap has norm one, and the sum of the absolute generator weights in the product is $`b`$. The Leibniz expansion therefore bounds the norm of its third derivative by $`b^3`$, at every real argument. The exact exponential has the same derivative bound because $`\Vert H_b\Vert_\infty\le b`$. Both functions have identical Taylor terms through second order. Applying the integral remainder to each gives the displayed $`b^3|\delta|^3/3`$ estimate.
 
 For unitaries $`U,V`$,
 
 ```math
-\|\operatorname{Ad}_U-\operatorname{Ad}_V\|_\diamond
-\le 2\|U-V\|_\infty.
+\Vert\mathrm{Ad}_U-\mathrm{Ad}_V\Vert_\diamond
+\le 2\Vert U-V\Vert_\infty.
 ```
 
 Preparing and discarding a program register are channel contractions. Consequently, replacing one exact collective collision by its symmetric sweep changes the resulting data channel by at most $`2b^3|\delta|^3/3`$ in unhalved diamond norm. Symmetry removes the second-order product error that a first-order sweep would introduce.
@@ -104,8 +104,8 @@ Preparing and discarding a program register are channel contractions. Consequent
 The [collision bound](collision_bound.md) gives the ideal reduced-channel error for $`N`$ fresh programs, each interacting for $`\delta=\pi r/N`$:
 
 ```math
-\left\|\Phi_{\pi r/N}^{N}
-      -\operatorname{Ad}_{R_P^{\otimes b}}\right\|_\diamond
+\left\Vert\Phi_{\pi r/N}^{N}
+      -\mathrm{Ad}_{R_P^{\otimes b}}\right\Vert_\diamond
 \le \frac{2\pi^2r^2v_b}{N},
 ```
 
@@ -121,8 +121,8 @@ v_b
 Replacing every collision by a symmetric sweep and telescoping over the $`N`$ steps yields
 
 ```math
-\left\|\widetilde\Phi_{b,N}
-      -\operatorname{Ad}_{R_P^{\otimes b}}\right\|_\diamond
+\left\Vert\widetilde\Phi_{b,N}
+      -\mathrm{Ad}_{R_P^{\otimes b}}\right\Vert_\diamond
 \le
 \frac{2\pi^2 r b(r+b-1)}{N}
 +\frac{2\pi^3r^3b^3}{3N^2}.
@@ -192,18 +192,18 @@ be the numbers of program copies and partial-swap gadgets. There is one variable
 up to an irrelevant global phase. Exact surrounding gates preserve that error, so each gadget contributes at most $`2\zeta`$ in diamond norm. A telescoping bound for the complete circuit gives at most $`2L\zeta=\epsilon/2`$ of synthesis error. Together with the program and sweep errors,
 
 ```math
-\left\|\mathcal C_P
- -\operatorname{Ad}_{R_P^{\otimes k}}\right\|_\diamond
+\left\Vert\mathcal C_P
+ -\mathrm{Ad}_{R_P^{\otimes k}}\right\Vert_\diamond
 \le\epsilon.
 ```
 
 The synthesis estimate can retain the work qubit at the output. Ideal rotations return it exactly. With approximate finite gates, its return to $`|0\rangle`$, its decoupling from the data, and the data-channel accuracy hold jointly within the same complete-channel error budget. Exact work return is therefore asserted in the ideal-rotation model; approximate synthesis does not silently inherit an exact-return promise. The theorem requires no measurement, postselection or success flag.
 
-For a fixed universal gate set such as Clifford+T, the [Solovay–Kitaev construction of Dawson and Nielsen](https://arxiv.org/abs/quant-ph/0505030) gives a conservative $`\operatorname{polylog}(L/\epsilon)`$ synthesis cost per variable rotation. Fixed controlled swaps have exact constant-size decompositions at the qubit level. The resulting total gate bound is
+For a fixed universal gate set such as Clifford+T, the [Solovay–Kitaev construction of Dawson and Nielsen](https://arxiv.org/abs/quant-ph/0505030) gives a conservative $`\mathrm{polylog}(L/\epsilon)`$ synthesis cost per variable rotation. Fixed controlled swaps have exact constant-size decompositions at the qubit level. The resulting total gate bound is
 
 ```math
 O\!\left(
-L\left[n+\operatorname{polylog}\!\left(\frac L\epsilon\right)\right]
+L\left[n+\mathrm{polylog}\!\left(\frac L\epsilon\right)\right]
 \right).
 ```
 
@@ -255,7 +255,7 @@ for all $`k\ge1`$. When $`k\le r`$, use $`b=k`$ and $`N_{\mathrm{tot}}=O(r^2k/\e
 | Pair partial-swap gadgets | $`L=\sum_j(2b_j-1)N_j`$ |
 | Variable rotations | $`L`$ |
 | Gates with ideal rotations | $`O(Ln)`$ |
-| Gates from a fixed universal set | $`O(L[n+\operatorname{polylog}(L/\epsilon)])`$ |
+| Gates from a fixed universal set | $`O(L[n+\mathrm{polylog}(L/\epsilon)])`$ |
 | Work in addition to data and the active program | One qubit, with the return accuracy specified above |
 | Registers actively participating in one group | At most $`(b+1)n+1`$ qubits |
 | Total retained quantum state with streamed programs | $`(k+1)n+1`$ qubits |

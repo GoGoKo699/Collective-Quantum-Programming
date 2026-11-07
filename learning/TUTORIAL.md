@@ -6,7 +6,7 @@ Follow this route alongside the [30 milestones](MILESTONES.md). The [Watrous bri
 
 ## 1. From a specimen to an operation
 
-**Milestones [M01–M06](MILESTONES.md#m01).** Let $`P`$ be an orthogonal projector of known rank $`r`$ on a $`d`$-dimensional register. A specimen has density operator $`\rho_P=P/r`$. It assigns equal weight to every direction in the range of $`P`$, and zero weight to its orthogonal complement. Its trace is one because $`\operatorname{Tr}P=r`$.
+**Milestones [M01–M06](MILESTONES.md#m01).** Let $`P`$ be an orthogonal projector of known rank $`r`$ on a $`d`$-dimensional register. A specimen has density operator $`\rho_P=P/r`$. It assigns equal weight to every direction in the range of $`P`$, and zero weight to its orthogonal complement. Its trace is one because $`\mathrm{Tr}\,P=r`$.
 
 The desired unitary is $`R_P=I-2P`$. A vector in the range of $`P`$ acquires phase $`-1`$; a vector in the complement acquires phase $`+1`$. The ordinary channel acts on a density operator $`X`$ as $`X\mapsto R_PXR_P`$. A common phase on the entire vector cancels in this expression, while a relative phase between its components can change the state.
 
@@ -19,8 +19,8 @@ The processor receives $`N`$ independent specimens of the same unknown $`P/r`$ a
 Write $`\mathcal E_{P,N}`$ for its implemented batch channel and $`\mathcal R_P^{(k)}`$ for the ideal channel of $`R_P^{\otimes k}`$. The requirement is
 
 ```math
-\sup_{\operatorname{rank}P=r}
-\|\mathcal E_{P,N}-\mathcal R_P^{(k)}\|_\diamond
+\sup_{\mathrm{rank}\,P=r}
+\Vert\mathcal E_{P,N}-\mathcal R_P^{(k)}\Vert_\diamond
 \le\epsilon.
 ```
 
@@ -33,9 +33,9 @@ The input resource is a hard budget of independent specimens. Knowing $`r`$ does
 **Milestones [M13–M15](MILESTONES.md#m13).** Take $`d=3`$, $`r=2`$ and $`k=2`$. For explaining the action, choose coordinates in which
 
 ```math
-P=\operatorname{diag}(1,1,0),\qquad
-\rho_P=\operatorname{diag}(1/2,1/2,0),\qquad
-R_P=\operatorname{diag}(-1,-1,1).
+P=\mathrm{diag}(1,1,0),\qquad
+\rho_P=\mathrm{diag}(1/2,1/2,0),\qquad
+R_P=\mathrm{diag}(-1,-1,1).
 ```
 
 The implementation is not supplied these coordinates. Its gates are swaps, which work for every orientation of the unknown support.
@@ -58,14 +58,14 @@ e^{-i\pi r h}=R_P^{\otimes2}.
 
 Here $`\rho_{P,j}`$ acts on target $`j`$ and as the identity on the other target. The two terms commute. Each eigenvalue $`1/r`$ therefore acquires phase $`e^{-i\pi}=-1`$ after time $`\pi r`$.
 
-A finite collision also fluctuates around this mean action. Define $`M`$ as the program expectation of $`H_*^2`$ and $`v=\|M-h^2\|_\infty`$. In an analytical purification, this variance measures the coupling out of the subspace in which the purified environment remains fixed.
+A finite collision also fluctuates around this mean action. Define $`M`$ as the program expectation of $`H_*^2`$ and $`v=\Vert M-h^2\Vert_\infty`$. In an analytical purification, this variance measures the coupling out of the subspace in which the purified environment remains fixed.
 
 ## 4. Turning local error into a specimen count
 
 **Milestones [M16–M20](MILESTONES.md#m16).** The [collision lemma](../science/collision_bound.md) proves, for every real collision duration $`\delta`$,
 
 ```math
-\|\Phi_\delta-\operatorname{Ad}_{e^{-i\delta h}}\|_\diamond
+\Vert\Phi_\delta-\mathrm{Ad}_{e^{-i\delta h}}\Vert_\diamond
 \le2\delta^2v.
 ```
 

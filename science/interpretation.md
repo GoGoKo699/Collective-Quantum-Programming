@@ -15,7 +15,7 @@ The statement is uniform in the register dimension $`d>r`$. It concerns the copi
 One program register interacts with several targets before it is discarded. Its mean action generates the desired product unitary. Its fluctuations introduce error, including correlations among the targets. For the swap-star interaction on $`k`$ targets, the conditional second moment is
 
 ```math
-\|M\|_\infty=k+\frac{k(k-1)}r.
+\Vert M\Vert_\infty=k+\frac{k(k-1)}r.
 ```
 
 The first term comes from using each individual swap twice. The second comes from pairs of different target interactions and is suppressed by the flat program's eigenvalue $`1/r`$. After evolution for time $`\pi r`$, the resulting sample upper bound is

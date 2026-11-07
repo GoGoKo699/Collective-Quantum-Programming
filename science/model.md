@@ -41,12 +41,12 @@ The hard source budget is $`N`$ specimens. A processor may discard unused specim
 
 ## Joint accuracy
 
-For an operator $`X`$, write $`\|X\|_1=\operatorname{Tr}\sqrt{X^\dagger X}`$ and let $`\|X\|_\infty`$ denote its operator norm. The error convention is the **unhalved diamond norm**. For the difference $`\Delta`$ of two channels on $`A`$,
+For an operator $`X`$, write $`\Vert X\Vert_1=\mathrm{Tr}\,\sqrt{X^\dagger X}`$ and let $`\Vert X\Vert_\infty`$ denote its operator norm. The error convention is the **unhalved diamond norm**. For the difference $`\Delta`$ of two channels on $`A`$,
 
 ```math
-\|\Delta\|_\diamond
+\Vert\Delta\Vert_\diamond
 =\sup_{\omega\in\mathsf D(A\otimes Z)}
-\left\|(\Delta\otimes\operatorname{id}_Z)(\omega)\right\|_1,
+\left\Vert(\Delta\otimes\mathrm{id}_Z)(\omega)\right\Vert_1,
 \qquad \dim Z=\dim A=d^k.
 ```
 
@@ -55,8 +55,8 @@ The set $`\mathsf D(B)`$ contains the density operators on $`B`$. The reference 
 A processor is $`\epsilon`$-accurate if
 
 ```math
-\sup_{P:\,P^2=P=P^\dagger,\ \operatorname{rank}P=r}
-\left\|\widetilde{\mathcal R}_P-\mathcal R_P^{(k)}\right\|_\diamond
+\sup_{P:\,P^2=P=P^\dagger,\ \mathrm{rank}\,P=r}
+\left\Vert\widetilde{\mathcal R}_P-\mathcal R_P^{(k)}\right\Vert_\diamond
 \le\epsilon.
 ```
 

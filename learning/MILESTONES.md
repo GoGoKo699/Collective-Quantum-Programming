@@ -86,7 +86,7 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** Which operator estimates can control a physical error without introducing a dimension factor?
 
-**Understanding target.** Distinguish the operator norm $`\|\cdot\|_\infty`$ from the trace norm $`\|\cdot\|_1`$. Use positive-operator order, the largest eigenvalue of a positive operator, unitary invariance, and trace-norm product bounds to interpret compression and leakage estimates.
+**Understanding target.** Distinguish the operator norm $`\Vert\cdot\Vert_\infty`$ from the trace norm $`\Vert\cdot\Vert_1`$. Use positive-operator order, the largest eigenvalue of a positive operator, unitary invariance, and trace-norm product bounds to interpret compression and leakage estimates.
 
 **Dependencies and story role.** [M01](#m01), [M05](#m05). This introduces the quantitative language used in both the local channel estimate and the exact variance calculation.
 
@@ -100,7 +100,7 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** How does distance between two states limit the ability to tell them apart?
 
-**Understanding target.** Interpret $`T(\alpha,\beta)=\tfrac12\|\alpha-\beta\|_1`$ through optimal binary discrimination. Explain its contractivity under a fixed channel and keep its factor of one-half distinct from the project's unhalved channel-error convention.
+**Understanding target.** Interpret $`T(\alpha,\beta)=\tfrac12\Vert\alpha-\beta\Vert_1`$ through optimal binary discrimination. Explain its contractivity under a fixed channel and keep its factor of one-half distinct from the project's unhalved channel-error convention.
 
 **Dependencies and story role.** [M04](#m04), [M06](#m06). This gives an operational meaning to a state-distance bound.
 
@@ -114,7 +114,7 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** How can single-specimen overlap control the distinguishability of many independent specimens?
 
-**Understanding target.** Use root fidelity $`f(\alpha,\beta)=\|\sqrt\alpha\sqrt\beta\|_1`$, its multiplicativity on tensor products, and the inequality $`T\le\sqrt{1-f^2}`$. Explain why the iid source promise permits a single-copy fidelity calculation to control the full program input.
+**Understanding target.** Use root fidelity $`f(\alpha,\beta)=\Vert\sqrt\alpha\sqrt\beta\Vert_1`$, its multiplicativity on tensor products, and the inequality $`T\le\sqrt{1-f^2}`$. Explain why the iid source promise permits a single-copy fidelity calculation to control the full program input.
 
 **Dependencies and story role.** [M05](#m05), [M07](#m07). This turns local state overlap into a quantitative constraint on a source budget.
 
@@ -200,7 +200,7 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** Which correlations appear when the same specimen participates in two different target interactions?
 
-**Understanding target.** Track the order in $`\mathcal E_\rho(S_{a,i}S_{a,j})=\rho_jS_{i,j}`$ and interpret the second moment $`M=\mathcal E_\rho(H_*^2)`$. Explain the separate single-swap and cross-target contributions to $`\|M\|_\infty=k+k(k-1)/r`$.
+**Understanding target.** Track the order in $`\mathcal E_\rho(S_{a,i}S_{a,j})=\rho_jS_{i,j}`$ and interpret the second moment $`M=\mathcal E_\rho(H_*^2)`$. Explain the separate single-swap and cross-target contributions to $`\Vert M\Vert_\infty=k+k(k-1)/r`$.
 
 **Dependencies and story role.** [M06](#m06), [M13](#m13). This identifies the rank-dependent structure that a full interaction-norm bound would discard.
 
@@ -214,7 +214,7 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** Which part of the joint interaction differs from the desired mean evolution?
 
-**Understanding target.** Interpret the positive operator $`M-h^2`$ and its norm $`v=\|M-h^2\|_\infty`$. Use the purification isometry $`V`$ to relate this variance to coupling out of the fixed-environment subspace, and understand why subtracting the mean isolates the relevant fluctuation.
+**Understanding target.** Interpret the positive operator $`M-h^2`$ and its norm $`v=\Vert M-h^2\Vert_\infty`$. Use the purification isometry $`V`$ to relate this variance to coupling out of the fixed-environment subspace, and understand why subtracting the mean isolates the relevant fluctuation.
 
 **Dependencies and story role.** [M05](#m05), [M06](#m06), [M13](#m13), [M14](#m14). This converts the raw moment calculation into the quantity that controls the error.
 
@@ -228,7 +228,7 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** How does the centered fluctuation produce a nonasymptotic channel-error estimate?
 
-**Understanding target.** Connect the compressed Kraus operator's deviation from the intended unitary with the remaining completely positive leakage map. Explain why the two contributions give $`\|\Phi_\delta-\mathcal U_\delta\|_\diamond\le2\delta^2v`$ for a collision of duration $`\delta`$, including every reference input.
+**Understanding target.** Connect the compressed Kraus operator's deviation from the intended unitary with the remaining completely positive leakage map. Explain why the two contributions give $`\Vert\Phi_\delta-\mathcal U_\delta\Vert_\diamond\le2\delta^2v`$ for a collision of duration $`\delta`$, including every reference input.
 
 **Dependencies and story role.** [M05](#m05), [M06](#m06), [M09](#m09), [M15](#m15). This completes the local analytical mechanism before specializing its variance.
 

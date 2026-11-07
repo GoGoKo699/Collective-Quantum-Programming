@@ -25,13 +25,13 @@ For $`\rho_P=P/r`$, evolution for time $`t=\pi r`$ gives $`e^{-it\rho_P}=R_P`$. 
 
 ## HME supplies the collective interaction
 
-[Wei et al. (2024)](https://doi.org/10.1038/s41534-024-00949-z) introduced Hermitian-preserving map exponentiation (HME). For a Hermitian-preserving linear map $`\mathcal N`$, their processor uses the interaction $`H=\operatorname{Choi}(\mathcal N)^{T_{\mathrm{in}}}`$ to simulate $`e^{-it\mathcal N(\rho)}`$. Taking $`\mathcal N(\rho)=\sum_{j=1}^k\rho_j`$ gives exactly
+[Wei et al. (2024)](https://doi.org/10.1038/s41534-024-00949-z) introduced Hermitian-preserving map exponentiation (HME). For a Hermitian-preserving linear map $`\mathcal N`$, their processor uses the interaction $`H=\mathrm{Choi}(\mathcal N)^{T_{\mathrm{in}}}`$ to simulate $`e^{-it\mathcal N(\rho)}`$. Taking $`\mathcal N(\rho)=\sum_{j=1}^k\rho_j`$ gives exactly
 
 ```math
-H_\star=\sum_{j=1}^k\operatorname{SWAP}_{a,j},
+H_\star=\sum_{j=1}^k\mathrm{SWAP}_{a,j},
 ```
 
-where $`a`$ is the program register. Thus HME already supplies the interaction used here. Its generic $`O(t^2\|H\|_\infty^2/\varepsilon)`$ sample bound gives $`O(r^2k^2/\varepsilon)`$ for this choice.
+where $`a`$ is the program register. Thus HME already supplies the interaction used here. Its generic $`O(t^2\Vert H\Vert_\infty^2/\varepsilon)`$ sample bound gives $`O(r^2k^2/\varepsilon)`$ for this choice.
 
 State-sensitive improvements also have a direct HME precedent. Appendix C.2, Proposition 3 and Lemma 6 of the [2023 preprint, v1](https://arxiv.org/html/2308.07956v1#A3.SS2), improve the partial-transpose simulation bound from a quadratic to a linear factor in the transposed subsystem dimension. That analysis controls mixed higher moments and retains a marginal-state operator norm. The refinement here evaluates the compressed variance of $`H_\star`$ for $`P/r`$, producing the different dependence $`r^2k+rk^2`$. It uses this established approach to obtain the parallel programming law.
 

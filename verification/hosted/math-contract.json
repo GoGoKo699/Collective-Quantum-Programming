@@ -40,14 +40,14 @@
     {
       "path": "science/parallel_program.md",
       "index": 59,
-      "source_sha256": "d874df9d5e8ee962ebf8515b3c5885626d02d7c91d370b66abee3eeedc2b74dd",
-      "expected_text": "vr,k:=∥M−h2∥∞=maxm∈{0,...,k}(k+(k−1)mr−m2r2)."
+      "source_sha256": "9c3be042a7c255f72596a63d8b2196e986859b9f3bf5dac3a0196a7137fa8ddf",
+      "expected_text": "vr,k:=‖M−h2‖∞=maxm∈{0,...,k}(k+(k−1)mr−m2r2)."
     },
     {
       "path": "science/collision_bound.md",
       "index": 25,
-      "source_sha256": "128e8dcaa4b8c0fe39547c7891f64b07f267fe5c31a8f2149c46261703b71a97",
-      "expected_text": "∥Φτ−Uτ∥⋄≤2τ2v."
+      "source_sha256": "4290f5c7664140845ceb06b06d5f227c9da7bc1e1e3d7e3e3b6d5f96b3735692",
+      "expected_text": "‖Φτ−Uτ‖⋄≤2τ2v."
     },
     {
       "path": "science/converse.md",
@@ -82,8 +82,8 @@
     {
       "path": "learning/ANCHOR.md",
       "index": 19,
-      "source_sha256": "c4d2943f6e2df16710964b2992dd5658358303d52543cf8bfb8f2c64e9c6f54d",
-      "expected_text": "f(ρ,σ)=∥ρσ∥1"
+      "source_sha256": "b4d9e6cf2f893c7dcfc97e3b37370bbd40dfd552fd7fda40e1dd600a58698a09",
+      "expected_text": "f(ρ,σ)=‖ρσ‖1"
     },
     {
       "path": "learning/ANCHOR.md",
@@ -100,13 +100,13 @@
     {
       "path": "learning/ANCHOR.md",
       "index": 23,
-      "source_sha256": "23ad85c708f3a6a9131b5590c23663aa97fa8d883cc7b85e5cd2c63295891e57",
-      "expected_text": "∥Φ∥⋄"
+      "source_sha256": "04065d3c54e62832a84474cdbcd2bc63aad73e50023898fc9970160598e461fb",
+      "expected_text": "‖Φ‖⋄"
     },
     {
       "path": "learning/TUTORIAL.md",
       "index": 30,
-      "source_sha256": "3601313b2aaf95e8cc0c6a5f996e15d67072998a80b1ed10bf89d67956c93a9d",
+      "source_sha256": "0c0075082ba2a42985f418036f29d6cd492bb30e55bc29a45ee9d9b7b7935238",
       "expected_text": "P=diag(1,1,0),ρP=diag(1/2,1/2,0),RP=diag(−1,−1,1)."
     },
     {

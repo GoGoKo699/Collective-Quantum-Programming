@@ -34,8 +34,8 @@ The second sum is empty when $`r=1`$. Both projectors have rank $`r`$; the direc
 For states $`\alpha`$ and $`\beta`$, define the root fidelity and trace distance by
 
 ```math
-f(\alpha,\beta)=\|\sqrt\alpha\sqrt\beta\|_1,\qquad
-T(\alpha,\beta)=\frac12\|\alpha-\beta\|_1.
+f(\alpha,\beta)=\Vert\sqrt\alpha\sqrt\beta\Vert_1,\qquad
+T(\alpha,\beta)=\frac12\Vert\alpha-\beta\Vert_1.
 ```
 
 The nonzero singular values of $`P_0P_\theta`$ are $`r-1`$ copies of one and one value $`\cos\theta`$. Therefore the exact single-specimen root fidelity is
