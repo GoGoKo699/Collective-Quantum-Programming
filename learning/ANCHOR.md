@@ -90,7 +90,7 @@ The control readout induces an effect $`M_Q`$ with $`\Vert M_Q-Q\Vert_\infty\le\
 ```math
 \begin{aligned}
 R(M_Q,Q)-R_*
-&=\frac12\operatorname{Tr}\left[(Q-M_Q)
+&=\frac12\mathrm{Tr}\left[(Q-M_Q)
 \left(\frac Qs-\frac{I_d}{d}\right)\right]\\
 &\le A_{d,s}\epsilon,
 \qquad A_{d,s}=\frac{1-s/d}{2}.

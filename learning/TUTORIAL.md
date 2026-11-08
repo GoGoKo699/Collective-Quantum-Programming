@@ -152,7 +152,7 @@ A Hadamard readout of the control is ideally the support measurement $`Q`$. The 
 ```math
 \begin{aligned}
 R(M_Q,Q)-R_*
-&=\frac12\operatorname{Tr}\left[(Q-M_Q)
+&=\frac12\mathrm{Tr}\left[(Q-M_Q)
 \left(\frac Q2-\frac{I_W}{3}\right)\right]\\
 &\le A\epsilon.
 \end{aligned}
