@@ -4,6 +4,8 @@ This check compares the mathematics displayed by GitHub with the Markdown at an 
 
 The [workflow](../../.github/workflows/hosted-mathematics.yml) runs on pull requests from this repository, with a read-only repository token and no retained checkout credentials. Its collector uses no GitHub authentication. Dependencies are locked, and the three official GitHub actions are pinned to complete commit hashes. Reports include the checked source commit and tree, page and expression hashes, actual hosted HTML, screenshots, and any failures. Artifacts expire after seven days; retain a report separately when using it as a durable verification record.
 
+The workflow first runs the representative diagnostic in `probe_hosted_math.cjs` on the anchor bridge, then performs the complete comparison. The diagnostic is not release evidence.
+
 ## Run the same check
 
 Use Node.js 18 or newer, Python 3.10 or newer, Git, and an environment that permits Chromium and access to public GitHub pages. From the repository root:
