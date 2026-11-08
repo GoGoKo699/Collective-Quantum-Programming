@@ -15,19 +15,13 @@
     },
     {
       "path": "README.md",
-      "index": 13,
-      "source_sha256": "f80aa07c893e332d98a8286b02b63e2ab47326275fff9953735fd29955253239",
-      "expected_text": "98π2rk2ε≤N∗(d,r,k,ε)≤⌈4π2rk(r+k−1)ε⌉."
-    },
-    {
-      "path": "README.md",
-      "index": 14,
+      "index": 15,
       "source_sha256": "f85901d0d54f9cab3a33d3c9e6c4f1804f1171f500992433c26eea04b69aa5de",
       "expected_text": "k≥r"
     },
     {
       "path": "README.md",
-      "index": 15,
+      "index": 16,
       "source_sha256": "427e53992b61b77271e0242dd7a6b16db59d66039ca3f4e6740147fa2f11b8b6",
       "expected_text": "N∗(d,r,k,ε)=Θ(rk2ε)."
     },
@@ -51,19 +45,19 @@
     },
     {
       "path": "science/converse.md",
-      "index": 11,
+      "index": 12,
       "source_sha256": "3a157eb9e215f9bb999d494c87d1a0b540b1ea442c5df4021703d6c6fe7ea86d",
       "expected_text": "N≥98π2rk2ε."
     },
     {
       "path": "science/converse.md",
-      "index": 29,
+      "index": 30,
       "source_sha256": "bf2af2d7a4dcd8628d2971b194023e6f1d8e3112e22e390abcc295f36d8083b3",
       "expected_text": "f:=f(ρ0,ρθ)=r−1+cosθr."
     },
     {
       "path": "science/converse.md",
-      "index": 31,
+      "index": 32,
       "source_sha256": "ab1646e5b3c240827238d03e27fee722f7b4c145ef257bdb7d183dbfe93e75b8",
       "expected_text": "T(ρ0⊗L,ρθ⊗L)≤1−f2L≤2L(1−f)≤Lθ2r."
     },
@@ -120,6 +114,12 @@
       "index": 49,
       "source_sha256": "749eaf99a7aeff396c7b8423965107d77491f5adf94a3e6b2ffff9ae161fe4b5",
       "expected_text": "v2,2=maxm∈{0,1,2}(2+m2−m24)=94."
+    },
+    {
+      "path": "README.md",
+      "index": 13,
+      "source_sha256": "bf319eb686e19a6718086e32c76a8f03b7d4e9db36fb2d1c1ba615c5632a1baf",
+      "expected_text": "98π2max{r2,rk2}ε≤N∗(d,r,k,ε)≤⌈4π2rk(r+k−1)ε⌉."
     }
   ]
 }

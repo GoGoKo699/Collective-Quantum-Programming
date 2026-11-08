@@ -9,9 +9,10 @@
 - [Model](science/model.md): Independent programs P/r, known rank, deterministic unconditional processing, hard specimen budget and joint unhalved diamond error.
 - [Collision bound](science/collision_bound.md): Nonasymptotic variance-sensitive reduced-channel lemma.
 - [Collective construction](science/parallel_program.md): Swap moments, exact variance, repeated collisions and batching.
-- [Converse](science/converse.md): Nearby-support fidelity and phase-amplification lower bound.
+- [Pair converse](science/converse.md): Nearby-support fidelity and phase-amplification lower bound.
+- [Classification transfer](science/classification_transfer.md): Exact anchored ordinary-channel reduction, contrast-normalized classification risk, hard-budget endpoint treatment, single-target optimality and the combined batch lower envelope.
 - [Resources](science/resources.md): Pair gates, symmetric sweeps, finite rotation synthesis, memory and preparation charges.
-- [Interpretation](science/interpretation.md): Large-batch optimality, explicit DME comparison and unresolved small-batch dependence.
+- [Interpretation](science/interpretation.md): Single-target and large-batch optimality, explicit DME comparison and unresolved intermediate-batch dependence.
 
 ## Evidence and attribution
 
@@ -27,10 +28,10 @@ The single educational anchor is John Watrous, The Theory of Quantum Information
 
 - [Source bridge](learning/ANCHOR.md): Targeted sections, notation, root-fidelity and unhalved-diamond conventions, and the steps supplied by this project.
 - [Thirty milestones](learning/MILESTONES.md): M01–M12 background/preliminaries and M13–M30 narrative/innovation; stable understanding targets, earlier dependencies and source pointers.
-- [Worked tutorial](learning/TUTORIAL.md): A connected pass through the settled map, including a rank-two qutrit example, total-error accounting, gates and the converse.
+- [Worked tutorial](learning/TUTORIAL.md): A connected pass through the settled map, including a rank-two qutrit example, total-error accounting, gates, the pair converse and an anchored classification example.
 
 Use the milestone map for the project-wide dependency order, the source bridge for textbook connections, and the scientific pages for complete proofs and exact domains. The map is independent of any reader's progress or assessment history.
 
 ## Claim boundaries
 
-The matching law N*=Theta(r k^2/epsilon) holds for k>=r, 1<=r<d and 0<epsilon<=1/8. The construction has order (r^2 k+r k^2)/epsilon for all positive k. The exact-angle theorem and the finite-gate resource allocation have different constants. No matching small-batch theorem, controlled unknown reflection, online adaptive oracle, catalyst return, generic classical-compiler separation or runtime advantage is claimed. Public analytical proofs are authoritative; numerical checks do not establish the universal theorem or priority.
+The matching law N*=Theta(r^2/epsilon) holds at k=1, and N*=Theta(r k^2/epsilon) holds for k>=r, uniformly over 1<=r<d and 0<epsilon<=1/8. For every positive k the lower order is (r^2+r k^2)/epsilon and the constructive upper order is (r^2 k+r k^2)/epsilon. The exact-angle theorem and the finite-gate resource allocation have different constants. No complete intermediate-batch law, generic ordinary-to-controlled conversion, controlled unknown reflection, online adaptive oracle, catalyst return, generic classical-compiler separation or runtime advantage is claimed. Public analytical proofs are authoritative; numerical checks do not establish the universal theorem or priority.

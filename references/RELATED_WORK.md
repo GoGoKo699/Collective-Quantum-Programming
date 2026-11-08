@@ -8,14 +8,14 @@ The collective construction gives
 N=O\!\left(\frac{r^2k+rk^2}{\varepsilon}\right)
 ```
 
-program copies. A converse for arbitrary deterministic processors gives $`N=\Omega(rk^2/\varepsilon)`$. Consequently, for $`k\ge r`$ and $`0\lt \varepsilon\le1/8`$, the optimal sample cost is
+program copies. The pair-discrimination converse gives $`N=\Omega(rk^2/\varepsilon)`$, and the anchored classification transfer adds $`N=\Omega(r^2/\varepsilon)`$ for every nontrivial rank and dimension. Thus the single-target cost is $`\Theta(r^2/\varepsilon)`$. For $`k\ge r`$ and $`0\lt \varepsilon\le1/8`$, the optimal sample cost is
 
 ```math
 N_*(d,r,k,\varepsilon)
 =\Theta\!\left(\frac{rk^2}{\varepsilon}\right).
 ```
 
-The contribution is this rank-dependent parallel programming law and its resource realization. Its construction and converse build on sample-based simulation, Hermitian-preserving map exponentiation, collision models, and quantum-program discrimination. The distinctions below identify where those foundations enter and what the parallel law adds. Bibliographic metadata and version-specific references are collected in [references.bib](references.bib).
+The account develops this rank-dependent parallel programming law and its resource realization, together with an exact transfer of the classification precision converse that closes the single-target specimen order. Its construction and converse build on sample-based simulation, Hermitian-preserving map exponentiation, collision models, and quantum-program discrimination. The distinctions below identify where those foundations enter and what the parallel law adds. Bibliographic metadata and version-specific references are collected in [references.bib](references.bib).
 
 ## Density matrix exponentiation
 
@@ -59,6 +59,8 @@ Approximate program recycling is also established. [Yang, Renner, and Chiribella
 
 ## Relation to flat-subspace classification
 
-[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/tree/632fa8921e16b17dd5905b2e4f8d7f79d1570186) studies the same flat training source followed by one test from either $`P/r`$ or the known background $`I/d`$. At the cited revision, its [precision theorem](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/quantum_precision.md) gives $`\Theta(r^2/\varepsilon)`$ coherent training copies for excess classification risk, uniformly for $`1\le r\le d/2`$ and $`0\lt \varepsilon\le1/8`$. Its [construction](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/constructions.md) already uses a controlled support reflection.
+[Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits) studies the same flat training source followed by one test from either $`Q/s`$ or the known background $`I_d/d`$. Its [Theorem Q2 at revision 632fa892](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/632fa8921e16b17dd5905b2e4f8d7f79d1570186/science/quantum_precision.md) proves an all-rank finite-sample bound with contrast $`A_{d,s}=(1-s/d)/2`$, whose low-rank corollary is the familiar $`\Theta(s^2/\varepsilon)`$ classification law. The classification theorem and its controlled-reflection upper mechanism are antecedents, not new discoveries here.
 
-That single-test rank law and attaining reflection construction are antecedents. The present result supplies a coherent channel on $`k`$ data registers, identifies the sample saving from collective programming, and proves the optimal order when $`k\ge r`$. Its upper bound requires all targets in each batch to be available together. A processor accepting an arbitrary sequence of adaptive future inputs is a separate task, and a matching sample law throughout $`k\lt r`$ is not established here.
+The [transfer proved in this account](../science/classification_transfer.md) turns that classification converse into a programming lower bound. A known vacuum in programming dimension $`D=d+1`$ permits controlled-swap routing; the flagged-projector alternative instead uses dimension $`D=2d`$. In codimension one, a known occupied direction and an exact copy-local mixture preserve a hard budget while supplying the phase reference. The induced effect has operator error at most $`\epsilon/2`$, so classification excess is at most $`A_{d,s}\epsilon`$. Cancelling the contrast in Q2 gives the rank-squared programming converse, including high-rank cases. Ordinary channels are never assumed to admit generic coherent control.
+
+Q2 remains authoritative in the classification repository; this repository owns the anchored reduction and its ordinary-reflection consequence. Together with the pair converse, it establishes lower order $`\Omega((r^2+rk^2)/\epsilon)`$ against upper order $`O((r^2k+rk^2)/\epsilon)`$. The single-target and $`k\ge r`$ regimes match. The full $`1\lt k\lt r`$ optimum remains open: no extra factor $`k`$ follows from the single-test classification theorem. The upper construction still requires all inputs in each batch to be jointly available and does not provide a reusable oracle for adaptive future requests.

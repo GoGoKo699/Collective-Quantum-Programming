@@ -239,7 +239,7 @@ N_{\mathrm{tot}}
 =O\!\left(\frac{rk^2}{\epsilon}\right).
 ```
 
-The [converse](converse.md) establishes the same sample order in this regime. The gate count satisfies
+The [pair converse](converse.md) establishes the same sample order in this regime. At $`k=1`$, this implementation uses $`O(r^2/\epsilon)`$ specimens and the [classification transfer](classification_transfer.md) proves that order optimal uniformly for $`1\le r\lt d`$. Its known routing operations belong to a lower-bound reduction, not an extra physical resource supplied to the programming construction. The gate count satisfies
 
 ```math
 L\le(2b-1)N_{\mathrm{tot}}

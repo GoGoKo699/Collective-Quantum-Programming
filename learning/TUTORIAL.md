@@ -139,10 +139,43 @@ N\ge\frac{9}{8\pi^2}\frac{rk^2}{\epsilon}.
 
 The [full converse](../science/converse.md) gives the basis vectors, phase calculation and constants. Its force comes from the unconditional channel guarantee and hard specimen budget, so it includes processors with internal measurements and feedforward. The known comparison reflection is not a controlled unknown operation.
 
-## 7. Putting the contribution together
+## 7. A classifier closes the single-target cost
 
-**Milestones [M27–M30](MILESTONES.md#m27).** For $`1\le r\lt d`$ and $`0\lt \epsilon\le1/8`$, the upper order is $`(r^2k+rk^2)/\epsilon`$ and the lower order is $`rk^2/\epsilon`$. They match when $`k\ge r`$. This comparison identifies the optimal specimen law in that regime; for $`k\lt r`$ a gap remains.
+**Milestone [M27](MILESTONES.md#m27).** The pair converse measures how one rotating support direction affects a coherent batch. A different argument detects the rank-squared cost already present for a single target. Its statistical input is the classification project's all-rank theorem Q2; the [transfer proof](../science/classification_transfer.md) gives the full reduction and constants.
+
+For a concrete vacuum example, take programming dimension $`D=4`$, rank $`r=2`$, and a known vector $`v`$ in the kernel. The unknown projector is $`P=0_v\oplus Q`$, where $`Q`$ has rank two in a three-dimensional space $`W`$. Each supplied classification specimen $`Q/2`$ embeds into the programmer as one specimen $`P/2`$. The classification test arrives later, from $`Q/2`$ or $`I_W/3`$ with equal priors. No new examples arrive after that test.
+
+Initialize the programmer's data register in $`v`$. A control in $`|+\rangle`$ coherently routes either the test or $`v`$ through one ordinary reflection invocation, using controlled known swaps before and after it. Since $`R_Pv=v`$, one branch preserves the test and the other applies $`R_Q`$. The routing register returns to $`v`$ ideally. This circuit uses the ordinary channel on both branches; it assumes no controlled unknown oracle. Its known pre- and postprocessing preserve the hard budget $`N`$ and cannot increase the unhalved diamond error $`\epsilon`$.
+
+A Hadamard readout of the control is ideally the support measurement $`Q`$. The actual effect $`M_Q`$ obeys $`\Vert M_Q-Q\Vert_\infty\le\epsilon/2`$. The classification oracle error is $`R_*=1/3`$, and its available advantage is $`A=(1-2/3)/2=1/6`$. Keeping that contrast gives
+
+```math
+\begin{aligned}
+R(M_Q,Q)-R_*
+&=\frac12\operatorname{Tr}\left[(Q-M_Q)
+\left(\frac Q2-\frac{I_W}{3}\right)\right]\\
+&\le A\epsilon.
+\end{aligned}
+```
+
+Q2 says every classifier with $`N\ge4`$ has excess risk at least $`4A/(N+4)`$. Its small-budget branch rules out $`N\lt4`$ for the required tolerance when $`\epsilon\le1/2`$. Therefore
+
+```math
+A\epsilon\ge\frac{4A}{N+4}
+\quad\Longrightarrow\quad
+N\ge\left\lceil4(\epsilon^{-1}-1)\right\rceil.
+```
+
+The same calculation for classification dimension $`d=D-1`$ and rank $`s=r`$ gives $`N\ge\lceil r^2(\epsilon^{-1}-1)\rceil`$ whenever $`D\ge r+2`$. The factor $`A_{d,s}=(1-s/d)/2`$ cancels exactly, so no low-rank restriction is needed. The background remains $`I_d/d`$, not $`I_D/D`$.
+
+The codimension-one endpoint needs another anchor. If $`D=r+1`$ and $`r\ge2`$, fix $`P=|v\rangle\langle v|\oplus Q`$ with $`Q`$ of rank $`s=r-1`$ in dimension $`d=r`$. From each supplied $`Q/s`$ copy, output $`v`$ with probability $`1/r`$ and otherwise embed the copy. These independent known channels produce exactly the required $`N`$ program copies and never use more than $`N`$ training copies. Routing through the known eigenvalue $`-1`$ and correcting its phase by a known control $`Z`$ gives the same argument with $`s=r-1`$. The pure qubit case uses the preceding pair converse. Thus the single-target order is $`\Theta(r^2/\epsilon)`$ uniformly for all nontrivial ranks and dimensions.
+
+An alternative flagged construction makes the dimension increase explicit: for a rank-$`s`$ classification projector in dimension $`d`$, the projector $`|1\rangle\langle1|\otimes Q`$ has rank $`s`$ in dimension $`2d`$. Its ordinary reflection is controlled $`R_Q`$. Appending its known flag consumes one training copy per program copy. This is an enlarged-dimension reduction, not a generic same-dimension conversion from an ordinary unknown channel to its controlled version.
+
+## 8. Putting the contribution together
+
+**Milestones [M27–M30](MILESTONES.md#m27).** For $`1\le r\lt d`$ and $`0\lt \epsilon\le1/8`$, the upper order is $`(r^2k+rk^2)/\epsilon`$ and the lower order is $`(r^2+rk^2)/\epsilon`$. They match at $`k=1`$ and when $`k\ge r`$. For $`1\lt k\lt r`$ a gap remains, bounded in order by $`\min\{k,r/k\}`$ and largest near $`k\asymp\sqrt r`$. Padding a batch with fixed inputs and discarding extra outputs transfers the single-target lower bound unchanged; it does not multiply it by $`k`$.
 
 Separate density matrix exponentiation at error $`\epsilon/k`$ per target uses $`O(r^2k^2/\epsilon)`$ specimens. The large-batch construction improves that explicit bound by a factor of order $`r`$. Its pair-gate order remains $`O(r^2k^2/\epsilon)`$, so a specimen saving alone does not establish a runtime saving. At $`r=d`$ the desired ordinary channel is already the identity and consumes no specimens.
 
-HME supplies the collective interaction; previous work supplies moment-sensitive analysis, collision architectures and the fidelity/query method. The [related-work account](../references/RELATED_WORK.md) makes those dependencies explicit. The result here combines a rank-sensitive construction with a matching large-batch converse and an implementation whose resources are charged. The [scientific index](../science/README.md) gives the complete proof route, and the [finite checks](../verification/README.md) illustrate the matrix identities without replacing their proofs.
+HME supplies the collective interaction; previous work supplies moment-sensitive analysis, collision architectures and the fidelity/query method. The [related-work account](../references/RELATED_WORK.md) makes those dependencies explicit. The result here combines a rank-sensitive construction, the fidelity-based batch converse, the classification-derived single-target converse, and an implementation whose resources are charged. Q2 remains the classification project's statistical result; the anchored reduction explains its ordinary-channel programming consequence. The [scientific index](../science/README.md) gives the complete proof route, and the [finite checks](../verification/README.md) illustrate the matrix identities without replacing their proofs.
