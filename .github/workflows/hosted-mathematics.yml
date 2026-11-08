@@ -37,6 +37,14 @@ jobs:
       - name: Install the collector browser
         working-directory: verification/hosted
         run: node node_modules/playwright/cli.js install --with-deps chromium
+      - name: Inspect representative hosted mathematics
+        run: |
+          node verification/hosted/probe_hosted_math.cjs \
+            --root "$GITHUB_WORKSPACE" \
+            --repository "$GITHUB_REPOSITORY" \
+            --revision "$SOURCE_SHA" \
+            --page learning/ANCHOR.md \
+            --output "$RUNNER_TEMP/hosted-probe"
       - name: Compare the hosted mathematics with its source
         run: |
           test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
@@ -51,6 +59,8 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: hosted-mathematics-${{ env.SOURCE_SHA }}-${{ github.run_attempt }}
-          path: ${{ runner.temp }}/hosted-mathematics
+          path: |
+            ${{ runner.temp }}/hosted-mathematics
+            ${{ runner.temp }}/hosted-probe
           if-no-files-found: warn
           retention-days: 7

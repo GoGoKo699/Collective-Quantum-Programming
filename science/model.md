@@ -67,7 +67,7 @@ Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget for which such 
 **Theorem.** For every integer $`d\ge2`$, $`1\le r\lt d`$, $`k\ge1`$, and every $`0\lt \epsilon\le1/8`$,
 
 ```math
-\frac{9}{8\pi^2}\frac{rk^2}{\epsilon}
+\frac{9}{8\pi^2}\frac{\max\{r^2,rk^2\}}{\epsilon}
 \le N_*(d,r,k,\epsilon)
 \le
 \left\lceil\frac{4\pi^2rk(r+k-1)}{\epsilon}\right\rceil.
@@ -75,7 +75,13 @@ Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget for which such 
 
 The upper bound is realized by deterministic collisions with fresh program specimens and known pair partial swaps. Its displayed constant treats known one-qubit rotations as exact. A finite gate set gives the same asymptotic specimen law with an explicit synthesis budget in [resources.md](resources.md).
 
-The [collision bound](collision_bound.md) controls the full reduced channel through a compressed operator variance. The [parallel construction](parallel_program.md) evaluates that variance for the swap interaction and obtains the upper bound. The [converse](converse.md) applies to every processor in the model, including processors that first estimate a classical description of the support.
+The [collision bound](collision_bound.md) controls the full reduced channel through a compressed operator variance. The [parallel construction](parallel_program.md) evaluates that variance for the swap interaction and obtains the upper bound. The [pair converse](converse.md) gives the $`rk^2/\epsilon`$ lower term. The [classification transfer](classification_transfer.md) supplies the rank-squared term through an anchored reduction with the same hard budget and unhalved diamond error. Both apply to every processor in the model, including processors that first estimate a classical description of the support.
+
+At $`k=1`$, the upper and lower orders match uniformly for every $`1\le r\lt d`$:
+
+```math
+N_*(d,r,1,\epsilon)=\Theta\!\left(\frac{r^2}{\epsilon}\right).
+```
 
 When $`k\ge r`$, the theorem gives dimension-independent constants on both sides:
 
@@ -92,7 +98,7 @@ N_*(d,r,k,\epsilon)=\Theta\!\left(\frac{rk^2}{\epsilon}\right)
 \qquad (k\ge r, 0\lt \epsilon\le1/8).
 ```
 
-For $`k\lt r`$, the bounds stated here do not match. No complete optimal law in that regime is asserted. The upper construction itself applies throughout $`0\lt \epsilon\le1`$.
+For $`1\lt k\lt r`$, the theorem gives lower order $`\Omega((r^2+rk^2)/\epsilon)`$ and upper order $`O((r^2k+rk^2)/\epsilon)`$. Their ratio is within universal constants of $`\min\{k,r/k\}`$, at most order $`\sqrt r`$. No complete optimal law in that intermediate regime is asserted. The upper construction itself applies throughout $`0\lt \epsilon\le1`$.
 
 ## Availability and endpoints
 
@@ -100,4 +106,4 @@ The collective interaction requires joint access to the data registers in each p
 
 The excluded endpoint $`r=d`$ is trivial. Then $`P=I_{\mathcal H}`$ is known and $`R_P=-I_{\mathcal H}`$, so the ordinary target channel is the identity and needs zero specimens. The converse therefore requires the nonempty complement $`r\lt d`$.
 
-The swap interaction is inherited from Hermitian-preserving map exponentiation, and the converse adapts established sample-to-query discrimination arguments. The precise relation to HME, ordinary DME, and multipartite collision simulation is recorded in [RELATED_WORK.md](../references/RELATED_WORK.md).
+The swap interaction is inherited from Hermitian-preserving map exponentiation. The pair converse adapts established sample-to-query discrimination arguments; the rank-squared converse transfers the all-rank finite-sample theorem of Quantum Classification Rank Limits. The precise relation to HME, ordinary DME, and multipartite collision simulation is recorded in [RELATED_WORK.md](../references/RELATED_WORK.md).

@@ -1,8 +1,10 @@
-# A converse for every deterministic processor
+# Pair discrimination and the quadratic batch converse
 
 Two nearby support projectors give program states that are difficult to distinguish. Their relative reflections nevertheless accumulate a detectable phase on an entangled batch. Repeating an accurate processor converts its channel guarantee into a discrimination experiment and forces a lower bound on the number of source specimens.
 
-The reduction adapts the sample-to-query discrimination method used in rigorous sample-based Hamiltonian simulation, in particular [Go et al.](../references/RELATED_WORK.md). The family of flat-rank programs and the tensor-power phase accumulation determine the rank and batch-size dependence here.
+This page proves the $`rk^2/\epsilon`$ part of the [combined lower bound](model.md). The independent [classification transfer](classification_transfer.md) supplies its rank-squared part and closes the single-target order.
+
+The pair reduction adapts the sample-to-query discrimination method used in rigorous sample-based Hamiltonian simulation, in particular [Go et al.](../references/RELATED_WORK.md). The family of flat-rank programs and the tensor-power phase accumulation determine the rank and batch-size dependence here.
 
 ## Statement
 
@@ -143,4 +145,4 @@ as claimed.
 
 The proof uses a hard specimen budget and an unconditional channel guarantee. It makes no restriction on the processor's internal measurement strategy or on whether its stored description is quantum or classical. A success-conditioned channel or an expected-copy budget would require a different statement.
 
-All $`k`$ data registers are available during every invocation in the discrimination experiment. Repeating this parallel processor does not establish a construction for arbitrary sequential adaptive requests. The lower bound holds for every positive $`k`$, and matches the [upper bound](parallel_program.md) when $`k\ge r`$. It leaves the optimal dependence for $`k\lt r`$ unresolved.
+All $`k`$ data registers are available during every invocation in the discrimination experiment. Repeating this parallel processor does not establish a construction for arbitrary sequential adaptive requests. The lower bound holds for every positive $`k`$, and matches the [upper bound](parallel_program.md) when $`k\ge r`$. The [classification transfer](classification_transfer.md) additionally proves the optimal $`\Theta(r^2/\epsilon)`$ single-target order and strengthens the intermediate lower bound. The complete optimal dependence for $`1\lt k\lt r`$ remains unresolved.

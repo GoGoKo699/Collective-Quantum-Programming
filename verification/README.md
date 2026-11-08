@@ -7,9 +7,10 @@ Run from the repository root:
 ```bash
 python3 -m pip install -r verification/requirements.txt
 OPENBLAS_NUM_THREADS=1 python3 verification/verify.py --output verification/results.json
+OPENBLAS_NUM_THREADS=1 python3 verification/verify_transfer.py
 ```
 
-The checked environment used NumPy 2.3.5 and SciPy 1.17.0. The fixed random seed is 113207. The complete machine-readable output is [results.json](results.json). The script uses explicit finite matrices; no unknown-Hamiltonian oracle or diamond-norm SDP solver is assumed.
+The checked environment used NumPy 2.3.5 and SciPy 1.17.0. The collision/converse suite uses fixed random seed 113207 and writes [results.json](results.json). The anchored-transfer suite uses seed 20261108 and writes [transfer_results.json](transfer_results.json); its `--output PATH` option changes that destination. Both scripts use explicit finite matrices; no unknown-Hamiltonian oracle or diamond-norm SDP solver is assumed.
 
 ## What the calculation tests
 
@@ -40,6 +41,24 @@ The table gives the normalized Choi trace norm of the channel difference, equiva
 
 Four further checks construct two rotated supports directly, evaluate their root fidelity from positive matrices, and verify orthogonality after the known-reference reflection and GHZ phase-amplification circuit. They test the geometry used in the [converse](../science/converse.md). The all-processor lower bound follows from the analytical discrimination argument.
 
+## Anchored classification transfer
+
+[verify_transfer.py](verify_transfer.py) checks the circuit and error conventions used in the [classification transfer](../science/classification_transfer.md). There are 27 routing cases: classification dimension and rank $`(d,s)=(2,1),(3,2),(5,4)`$, each with a vacuum, occupied, and flagged embedding, at each batch size $`k=1,2,3`$.
+
+| Embedding | Programming register | Checked boundary |
+|---|---|---|
+| Known vacuum | $`D=d+1`$, rank $`r=s`$ | Includes a rank-one program and high classification rank |
+| Known occupied direction | $`D=d+1`$, rank $`r=s+1`$ | All listed instances have $`r=D-1`$, including the smallest nontrivial case $`D=3,r=2`$ |
+| Flagged projector | $`D=2d`$, rank $`r=s`$ | Direct block identity and routed channel with its exact doubled dimension |
+
+The check constructs controlled swaps, invokes the ordinary tensor-power reflection once, and checks the returned routing ancilla and fillers. It compares the complete output on a maximally entangled control/test input and its reference of dimension $`2D`$, then on a second random reference-entangled input. The stored routing residual is zero at the reported floating precision. The maximum ideal-effect residual is below $`1.7\times10^{-15}`$.
+
+For each occupied embedding, the script checks the exact source-mixture identity and all four independent two-slot branches against the desired product program. This checks independence as well as the single-copy state. The hard budget follows from the analytical copy-local channel: each output slot consumes at most one supplied specimen, including branches that discard it. No expected-budget or postselection claim is inferred from the numerical output.
+
+A diagnostic mixture of two maximally distinguishable ordinary channels has exactly unhalved diamond error $`\epsilon=0.074`$, certified here by an explicit orthogonal-output witness and the maximum possible channel distance. Its induced binary effect saturates $`\Vert M-Q\Vert_\infty=\epsilon/2`$ and excess risk $`E=A_{d,s}\epsilon`$. The stored risk-identity residual is below $`2.6\times10^{-16}`$. This fixture tests the factor of two and contrast normalization; it is not a claimed implementation from a finite specimen program. The ordinary-to-controlled conversion still relies on the known anchor sector.
+
+The universal diamond contraction, all-rank Q2 converse, integer lower-bound implication, and the absence of an additional direct-sum factor in $`k`$ are analytical statements. These finite cases do not numerically prove them or establish an optimal intermediate-batch law.
+
 ## Verification boundary
 
-The tests support the matrix identities, normalization, entangled-reference example, repeated-channel implementation and converse geometry in the listed dimensions. The universal variance lemma, all-dimensional theorem, Strang remainder, optimality and resource accounting are proved in the scientific pages. The tests do not establish priority, experimental performance, or the optimal small-batch cost. A passing numerical suite does not replace review of those proofs.
+The tests support the matrix identities, normalization, entangled-reference examples, repeated-channel implementation, anchored routing and converse geometry in the listed dimensions. The universal variance lemma, all-dimensional theorem, Strang remainder, optimality and resource accounting are proved in the scientific pages. The tests do not establish priority, experimental performance, or the optimal intermediate-batch cost. A passing numerical suite does not replace review of those proofs.
