@@ -11,6 +11,7 @@ Read the pages in this order for the complete argument:
 5. [Classification-to-programming converse](classification_transfer.md) proves the rank-squared lower bound through anchored routing, preserving dimensions, hard budgets and diamond error.
 6. [Gates, precision and storage](resources.md) implements the interaction using ordinary pair gates and accounts for finite precision and program chronology.
 7. [Interpretation and scope](interpretation.md) explains the gain over separate DME and the boundaries of the result.
+8. [Contaminated specimens and classical records](contaminated_reflections.md) derives the ambiguity floor, adapts the collision construction and compares coherent and classical-record programming at a single target.
 
 The [related-work account](../references/RELATED_WORK.md) identifies the established HME interaction, collision architecture and lower-bound methods, and states the resource law added here. The [verification guide](../verification/README.md) connects the numerical checks to the equations they test and explains their limits.
 

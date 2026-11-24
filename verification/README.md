@@ -62,3 +62,13 @@ The universal diamond contraction, all-rank Q2 converse, integer lower-bound imp
 ## Verification boundary
 
 The tests support the matrix identities, normalization, entangled-reference examples, repeated-channel implementation, anchored routing and converse geometry in the listed dimensions. The universal variance lemma, all-dimensional theorem, Strang remainder, optimality and resource accounting are proved in the scientific pages. The tests do not establish priority, experimental performance, or the optimal intermediate-batch cost. A passing numerical suite does not replace review of those proofs.
+
+## Checks for contaminated programs
+
+Run the joint finite-instance checks from the repository root.
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 verification/check_contamination.py
+```
+
+The deterministic suite checks the trace cost of a common training density, the compatible-reflection phase witness, the balanced recognition loss identity, and the rank-two example. It also probes the collision bound on reference-assisted inputs, including maximally entangled inputs. The [analytic treatment](../science/contaminated_reflections.md) gives the full diamond-norm bound.

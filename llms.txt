@@ -12,6 +12,7 @@
 - [Pair converse](science/converse.md): Nearby-support fidelity and phase-amplification lower bound.
 - [Classification transfer](science/classification_transfer.md): Exact anchored ordinary-channel reduction, contrast-normalized classification risk, hard-budget endpoint treatment, single-target optimality and the combined batch lower envelope.
 - [Resources](science/resources.md): Pair gates, symmetric sweeps, finite rotation synthesis, memory and preparation charges.
+- [Contaminated reflections](science/contaminated_reflections.md): Compatible-support criterion, finite-copy joint channel error, copy and gate budgets, anchored recognition and classical-record programming.
 - [Interpretation](science/interpretation.md): Single-target and large-batch optimality, explicit DME comparison and unresolved intermediate-batch dependence.
 
 ## Evidence and attribution
@@ -34,4 +35,4 @@ Use the milestone map for the project-wide dependency order, the source bridge f
 
 ## Claim boundaries
 
-The matching law N*=Theta(r^2/epsilon) holds at k=1, and N*=Theta(r k^2/epsilon) holds for k>=r, uniformly over 1<=r<d and 0<epsilon<=1/8. For every positive k the lower order is (r^2+r k^2)/epsilon and the constructive upper order is (r^2 k+r k^2)/epsilon. The exact-angle theorem and the finite-gate resource allocation have different constants. No complete intermediate-batch law, generic ordinary-to-controlled conversion, controlled unknown reflection, online adaptive oracle, catalyst return, generic classical-compiler separation or runtime advantage is claimed. Public analytical proofs are authoritative; numerical checks do not establish the universal theorem or priority.
+For clean programs, N*=Theta(r^2/epsilon) holds at k=1, and N*=Theta(r k^2/epsilon) holds for k>=r, uniformly over 1<=r<d and 0<epsilon<=1/8. For every positive k the lower order is (r^2+r k^2)/epsilon and the constructive upper order is (r^2 k+r k^2)/epsilon. Contamination adds floor order min(1,k r (1-a)/a), and the same copy orders suffice in the matched regimes when k r (1-a)/a <= epsilon/(4 pi). The classical-record sample law is Theta(r d/epsilon) for one clean target at r<=d/2. Contaminated comparable upper and lower orders in the classical-record model are established for rank one and one target. The models concern unconditional channels on jointly available data, and the resource law describes copies. Public analytical proofs supply the general statements; verification covers finite examples.
