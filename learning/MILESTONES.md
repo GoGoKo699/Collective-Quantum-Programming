@@ -332,7 +332,9 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Conceptual connection.** The spectrum remains fixed in both hypotheses. The lower bound uses uncertainty in the support, so a varying-spectrum worst-case theorem cannot replace this task-specific comparison.
 
-**Sources.** Anchor: Watrous [§3.2][W3]. Project: [nearby program states](../science/converse.md#a-nearby-pair-of-program-states) and [discrimination-method attribution](../references/RELATED_WORK.md#the-converse-uses-program-distinguishability).
+For the contaminated model, use positive order to construct one density operator shared by two such supports. Explain why that equality makes the lower bound survive arbitrarily many specimens.
+
+**Sources.** Anchor: Watrous [§1.1.2][W1] and [§3.2][W3]. Project: [nearby program states](../science/converse.md#a-nearby-pair-of-program-states), [compatible supports](../science/contaminated_reflections.md#when-two-supports-give-the-same-program) and [discrimination-method attribution](../references/RELATED_WORK.md#the-converse-uses-program-distinguishability).
 
 <a id="m24"></a>
 
@@ -396,13 +398,13 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** What established construction does collective programming improve, and which methods does it inherit?
 
-**Understanding target.** Reconstruct the separate-DME budget $`O(r^2k^2/\epsilon)`$ from a per-target error $`\epsilon/k`$. Explain the factor-$`r`$ specimen improvement for $`k\ge r`$, the retained pair-gate order, and the distinction between this explicit comparison and a universal separation from independent or classical processors.
+**Understanding target.** Reconstruct the separate-DME budget $`O(r^2k^2/\epsilon)`$ from a per-target error $`\epsilon/k`$. Explain the factor-$`r`$ specimen improvement for $`k\ge r`$ and the retained pair-gate order. Compare the clean single-target classical-record benchmark $`\Theta(rd/\epsilon)`$ at $`r\le d/2`$. Explain how the same anchored circuit invokes C3 when the training measurement happens before the data arrive.
 
 **Dependencies and story role.** [M10](#m10), [M21](#m21), [M22](#m22), [M27](#m27). This places the theorem in its computational and research context.
 
 **Conceptual connection.** The contribution is a sharper rank-sensitive law within established HME and discrimination methods. Correct attribution is necessary to identify what the comparison actually establishes.
 
-**Sources.** Anchor: Watrous [§3.3.2][W3] for error composition. Project: [comparison with separate DME](../science/interpretation.md#comparison-with-separate-dme), [resource comparison](../science/resources.md#6-what-the-sample-saving-compares), and [related work](../references/RELATED_WORK.md).
+**Sources.** Anchor: Watrous [§2.3.1][W2] for measurements and [§3.3.2][W3] for channel error. Project: [comparison with separate DME](../science/interpretation.md#comparison-with-separate-dme), [classical records](../science/contaminated_reflections.md#when-only-a-classical-record-survives-training), [resource comparison](../science/resources.md#6-what-the-sample-saving-compares), and [related work](../references/RELATED_WORK.md).
 
 <a id="m29"></a>
 
@@ -410,13 +412,13 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** Which changes in rank, output interface, or resource claim would require a different theorem?
 
-**Understanding target.** Locate the unresolved $`1\lt k\lt r`$ regime and compare its lower order $`(r^2+rk^2)/\epsilon`$ with its upper order $`(r^2k+rk^2)/\epsilon`$. Explain why a single-test classification converse and batch padding do not supply another factor $`k`$. Identify the trivial $`r=d`$ endpoint, the known-rank flat-spectrum promise, and the need for jointly available inputs within each group. Distinguish the proved channel from a controlled unknown gate, a returned catalyst, an online adaptive oracle, or a guaranteed runtime improvement.
+**Understanding target.** Locate the unresolved $`1\lt k\lt r`$ regime and compare its lower order $`(r^2+rk^2)/\epsilon`$ with its upper order $`(r^2k+rk^2)/\epsilon`$. Explain why a single-test classification converse and batch padding do not supply another factor $`k`$. Identify the trivial $`r=d`$ endpoint and the need for jointly available inputs. With contaminated specimens, separate the bias from collision error and check the margin required at target accuracy $`\epsilon`$.
 
 **Dependencies and story role.** [M02](#m02), [M11](#m11), [M12](#m12), [M22](#m22), [M27](#m27), [M28](#m28). This integrates the theorem's load-bearing assumptions and its resource interpretation.
 
 **Conceptual connection.** Strong accuracy on a parallel channel does not supply a different causal interface. A specimen saving also remains distinct from a saving in all physical costs.
 
-**Sources.** Anchor: Watrous [§2.2.1][W2] and [§3.3.3][W3] for precisely specified channels. Project: [availability and endpoints](../science/model.md#availability-and-endpoints), [interpretation](../science/interpretation.md), [classification-transfer limits](../science/classification_transfer.md), and [converse scope](../science/converse.md#scope-of-the-conclusion).
+**Sources.** Anchor: Watrous [§2.2.1][W2] and [§3.3.3][W3] for precisely specified channels. Project: [availability and endpoints](../science/model.md#availability-and-endpoints), [interpretation](../science/interpretation.md), [classification-transfer limits](../science/classification_transfer.md), and [contaminated copy budget](../science/contaminated_reflections.md#specimens-gates-and-synthesis).
 
 <a id="m30"></a>
 
@@ -424,13 +426,13 @@ Dependencies refer only to earlier milestone IDs. They describe mathematical and
 
 **Central question.** How do the physical mechanism, the mathematical bounds, and the implementation costs support one coherent conclusion?
 
-**Understanding target.** Connect the source contract to the shared-swap mean, rank-sensitive variance, complete-channel upper, charged implementation, fidelity-based batch converse, and classification-derived rank-squared converse. Explain the optimal single-target and large-batch specimen laws together with their explicit benchmark, inherited methods, and remaining intermediate-batch boundaries.
+**Understanding target.** Connect the source contract to the shared-swap mean, rank-sensitive variance, complete-channel upper, charged implementation, fidelity-based batch converse, and classification-derived rank-squared converse. Explain why the same ambiguous density can give a small rank-one recognition risk in high dimension and still leave a finite programming error for one target.
 
 **Dependencies and story role.** [M12](#m12), [M16](#m16), [M17](#m17), [M22](#m22), [M26](#m26), [M27](#m27), [M28](#m28), [M29](#m29). This completes the narrative phase by integrating the proof structure and operational meaning.
 
 **Conceptual connection.** The channel, dilation, norm, and distinguishability tools from the anchor meet in a single result about quantum states used as instructions. The project's canonical proofs supply the specific mechanism and quantitative laws; the classification account remains authoritative for Q2, the statistical input transferred by the anchored reduction.
 
-**Sources.** Anchor: Watrous [§2.2.2][W2] and [§3.1.1, §3.2, §§3.3.2–3.3.3][W3]. Project: [scientific account](../science/README.md), [model and theorem](../science/model.md), [interpretation](../science/interpretation.md), and [attribution](../references/RELATED_WORK.md).
+**Sources.** Anchor: Watrous [§2.2.2][W2] and [§3.1.1, §3.2, §§3.3.2–3.3.3][W3]. Project: [scientific account](../science/README.md), [model and theorem](../science/model.md), [recognition transfer](../science/contaminated_reflections.md#an-ordinary-channel-can-supply-a-classifier), and [attribution](../references/RELATED_WORK.md).
 
 [W1]: https://cs.uwaterloo.ca/~watrous/TQI/TQI.1.pdf
 [W2]: https://cs.uwaterloo.ca/~watrous/TQI/TQI.2.pdf

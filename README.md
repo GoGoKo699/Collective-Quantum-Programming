@@ -2,7 +2,7 @@
 
 How many copies of an unknown quantum state are needed to program the same reflection on an entire batch of inputs? This repository studies a flat-rank program state, $`\rho_P=P/r`$, where $`P`$ is an unknown rank-$`r`$ projector on $`\mathbb C^d`$. The desired operation is the ordinary channel of $`(I-2P)^{\otimes k}`$ on $`k`$ jointly available data registers. Accuracy is measured in the unhalved diamond norm for the complete batch, including inputs entangled across registers and with a reference.
 
-## Main result
+## Main result for clean specimens
 
 Let $`N_*(d,r,k,\epsilon)`$ be the smallest hard specimen budget of a deterministic, unconditional processor that achieves error at most $`\epsilon`$ uniformly over all rank-$`r`$ projectors. For $`1\le r\lt d`$, $`k\ge1`$ and $`0\lt \epsilon\le1/8`$,
 
@@ -34,6 +34,12 @@ The collective interaction itself is an instance of Hermitian-preserving map exp
 
 [Quantum Classification Rank Limits](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits) proves the classification precision converse used here. Its all-rank finite-sample theorem, transferred through a known vacuum or occupied direction, forces the rank-squared programming cost. The [transfer proof](science/classification_transfer.md) preserves the exact dimensions, hard specimen budget and unhalved diamond promise. A known eigenstate supplies the relative phase; generic controlled access to the ordinary reflection is not assumed. The classification theorem remains authoritative in that repository, and this repository develops its programming consequence.
 
+## Contaminated specimens and classical records
+
+If the training density is $`\rho=aP/r+(1-a)\sigma`$ with known clean fraction $`a`$ and an arbitrary fixed contaminant $`\sigma`$, the [contaminated-programming theorem](science/contaminated_reflections.md) adds an irreducible error of order $`\min\{1,kr(1-a)/a\}`$. It matches finite-copy error orders for one target and for $`k\ge r`$. Two distinct supports can produce the same training density, yet their reflections act differently on a coherent batch. For clean single-target programming at $`r\le d/2`$, keeping only a classical record after training requires $`\Theta(rd/\epsilon)`$ copies, versus $`\Theta(r^2/\epsilon)`$ with coherent retention.
+
+[Quantum Training Contamination](https://github.com/GoGoKo699/Quantum-Training-Contamination) derives the recognition limit for the same rank-one contaminated source. Its [flat-rank extension](https://github.com/GoGoKo699/Quantum-Training-Contamination/blob/main/science/flat_rank_training.md) and the [classification account](https://github.com/GoGoKo699/Quantum-Classification-Rank-Limits/blob/main/science/contaminated_training.md) follow the one-test risk. At fixed rank-one contamination that limiting recognition risk decreases with dimension, while the corresponding reflection error has a dimension-independent floor. The [programming account](science/contaminated_reflections.md#an-ordinary-channel-can-supply-a-classifier) explains the one-way reduction and where the two criteria differ.
+
 ## Read the account
 
 | Question | Page |
@@ -43,6 +49,7 @@ The collective interaction itself is an instance of Hermitian-preserving map exp
 | How do shared specimens implement the reflection batch? | [Collective construction](science/parallel_program.md) |
 | Why does every processor pay the quadratic batch cost? | [Pair-discrimination converse](science/converse.md) |
 | Why is the single-target rank-squared cost optimal? | [Classification-to-programming converse](science/classification_transfer.md) |
+| What changes with contaminated specimens or classical-only storage? | [Contaminated reflection theorem and classical-record programming](science/contaminated_reflections.md) |
 | What gates, precision, memory and preparation costs are required? | [Resources](science/resources.md) |
 | What does the gain mean, and where does it stop? | [Interpretation](science/interpretation.md) |
 | Which claims are inherited, and which comparisons are relevant? | [Related work and bibliography](references/RELATED_WORK.md) |
@@ -60,7 +67,7 @@ Use the [worked tutorial](learning/TUTORIAL.md) to follow that route through a t
 
 ## Scope and limitations
 
-The rank is known and the spectrum is exactly flat. Access consists of independent specimens of $`P/r`$; a preparation unitary, its inverse, a purification oracle and a classical eigenbasis are not supplied. Specimens are consumed. The guarantee concerns a parallel batch and does not provide a reusable oracle for future adaptive requests.
+The clean component has known rank and a flat spectrum. Access consists of independent specimens. Preparation unitaries, their inverses, purifications and a classical eigenbasis are unavailable. The processor consumes its specimens, and the guarantee concerns one parallel batch with jointly available data.
 
 For $`1\lt k\lt r`$, the bounds do not generally match: the lower is $`\Omega((r^2+rk^2)/\epsilon)`$ and the upper is $`O((r^2k+rk^2)/\epsilon)`$. Their remaining ratio is at most order $`\sqrt r`$. For $`r=d`$, the target is the identity channel and requires no specimens. The sample saving is not a claimed gate-count or wall-clock improvement: bounded-size groups use $`O(r^2k^2/\epsilon)`$ pair partial swaps, with additional dimension and rotation-synthesis costs stated explicitly.
 

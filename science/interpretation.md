@@ -44,7 +44,7 @@ Ordinary density matrix exponentiation on one target uses $`O(r^2/\eta)`$ specim
 | $`1\lt k\lt r`$ | $`O(r^2k/\varepsilon)`$ | $`O(r^2k^2/\varepsilon)`$ | Lower $`\Omega((r^2+rk^2)/\varepsilon)`$; the optimum is not determined here. |
 | $`k\ge r`$ | $`O(rk^2/\varepsilon)`$ | $`O(r^2k^2/\varepsilon)`$ | A factor-$`r`$ improvement in the asymptotic specimen bound, with a matching unrestricted converse. |
 
-At $`k=r`$, for example, the shared construction uses $`O(r^3/\varepsilon)`$ specimens, while the separate construction uses $`O(r^4/\varepsilon)`$. These are scaling statements; the explicit constants and ceilings are given with the constructions. The comparison is to the specified separate-DME protocol. It is not a lower bound on all processors that might be described as independent, and it does not establish a universal separation from classical estimation.
+At $`k=r`$, for example, the shared construction uses $`O(r^3/\varepsilon)`$ specimens, while the separate construction uses $`O(r^4/\varepsilon)`$. The explicit constants and ceilings are given with the constructions. This comparison concerns the specified separate-DME protocol. A [different theorem](contaminated_reflections.md#when-only-a-classical-record-survives-training) compares coherent retention with every classical-record strategy for a single target.
 
 Blocks of at most $`r`$ targets suffice to attain the optimal large-batch order. This avoids the gate overhead of applying every specimen to all $`k`$ targets when $`k`$ is much larger than $`r`$. The [resource account](resources.md) gives $`O(r^2k^2/\varepsilon)`$ pair partial swaps, matching the order of the separate-DME implementation. State preparation, protected storage, elementary gates and rotation precision still have their own costs. A specimen saving need not be an execution-time saving.
 
@@ -55,5 +55,11 @@ For intermediate batches, the ratio between the supported upper and lower rate b
 Two nearby supports give very similar program states. Yet a collective input can resolve their difference after enough coherent phase accumulation. The converse compares these two facts: distinguishability cannot increase under a fixed physical processor, while the target reflections would make the outputs orthogonal after suitable repetition. This enforces the $`rk^2/\varepsilon`$ cost.
 
 The result therefore specifies a finite benefit from sharing specimens across a batch. It does not turn those specimens into indefinitely reusable classical instructions. The processor consumes its programs, and each processed block requires its inputs to be available together. A sequence of adaptive requests, whose later inputs do not yet exist when earlier outputs are required, has a different causal interface.
+
+## What changes under contamination
+
+A single supplied density can be compatible with two different clean supports. Their relative reflection accumulates phase across the batch, even though their training states are identical at every copy budget. This drives the [contamination floor](contaminated_reflections.md#when-two-supports-give-the-same-program) as the batch grows. The coherent collision construction still gives the clean statistical order for a target error that clears the floor by the stated margin.
+
+For a single later test against a maximally mixed background, ambiguity can cost much less. The [anchored routing reduction](contaminated_reflections.md#an-ordinary-channel-can-supply-a-classifier) quantifies what a channel approximation guarantees for that test and explains why the classification lower bound alone is weaker.
 
 The rank-one case already has the quadratic $`k^2/\varepsilon`$ cost and offers no rank-dependent improvement over separate DME. The endpoint $`r=d`$ is different: $`P=I`$, so the ordinary reflection channel is the identity and needs no specimen. Exact flatness and known rank are assumptions of the stated problem. Extensions to an unknown spectrum or the full intermediate-batch optimum require additional results.
